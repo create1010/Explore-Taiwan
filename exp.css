@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');    
+*{
+    font-family: "Noto Sans TC", sans-serif;
+}
+/*section1*/
+.section1{
+    width: 100%;
+    background-color: #fff;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+}
+.section1 .title{
+    text-align: center;
+    position: relative;
+}
+.section1 .title span:first-child {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    margin: 40px 0 20px;
+}
+.section1 .title h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-family: "Mochiy Pop P One", sans-serif;
+    position: relative;
+}
+.section1 .title img{
+    position: absolute;
+    top: -20%;
+    right: 15%;
+    opacity: .3;
+}
+.section1 .title h2:after{
+    content: '';
+    display: block;
+    background-image: url(pic/禮物-removebg-preview.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    right: 15%;
+    bottom: -250%;
+    opacity: .3;
+}
+.section1 .title span:last-child{
+    font-size: 24px;
+    display: block;
+    font-family: "Mochiy Pop P One", sans-serif;
+    margin-bottom: 20px;
+}
+/*section2*/
+.section2{
+    width: 100%;
+}
+.section2 .card-list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #d00; */
+    justify-content: center;
+    margin: 20px auto 10px;
+    gap: 30px;
+}
+.section2 .card-list .card{
+    width: calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.section2 .card-list .card:after{
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, .5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease;
+}
+.section2 .card-list .card:hover:after{
+    background-color: rgba(0, 0, 0, 0);
+}
+.section2 .card-list .card .cardImg{
+    width: 100%;
+}
+.section2 .card-list .card .cardImg img{
+    width: 100%;
+    vertical-align: middle;
+}
+.section2 .card-list .card p{
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    bottom: 6%
+}
+/*section3*/
+.section3{
+    width: 100%;
+    padding: 20px 0;
+}
+.section3 .more{
+    width: 100%;
+}
+.section3 .more .icon{
+    text-align: center;
+}
+.section3 .more .icon a{
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    display: inline-block;
+    transform: scaleX(100%);
+    transition: .3s;
+}
+.section3 .more .icon a:hover{
+    color: #00BCD6;
+    font-weight: bold;
+    transform: scaleX(105%);
+}

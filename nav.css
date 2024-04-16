@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');    
+*{
+    font-family: "Noto Sans TC", sans-serif;
+}
+.customer{
+    background-color: #0B2F47;
+}
+.Sub-navigation{
+    width: 100%;
+    display: flex;
+}
+.Sub-navigation .logo{
+    flex: 10%;
+    text-decoration: none;
+}
+.Sub-navigation .logo img{
+    width: 100%;
+    vertical-align: middle;
+}
+.Sub-navigation .nav{
+    flex: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.Sub-navigation .nav ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Sub-navigation .nav li{
+    margin-left: 47px;
+}
+.Sub-navigation .nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    opacity: .5;
+}
+.Sub-navigation .nav li a:hover{
+    opacity: 1;
+    transition: .5s;
+}
+.Sub-navigation .login-btn{
+    flex: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Sub-navigation .login-btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    opacity: .5;
+}
+.Sub-navigation .login-btn a:hover{
+    opacity: 1;
+    transition: .5s;
+}

@@ -1,0 +1,164 @@
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');    
+    *{
+        font-family: "Noto Sans TC", sans-serif;
+    }
+    .footer{
+    background-color: #0B2F47;
+    padding: 10px 0;
+    }
+    .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    }   
+    .footer-wrap{
+        width: 100%;
+        display: flex;
+    }
+    .footer-wrap h4{
+        color: #fff;
+    }
+    .lastPage{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .lastPage li{
+        margin: 20px 0;
+    }
+    .lastPage a{
+        text-decoration: none;
+        color: #fff;
+        opacity: .5;
+        font-size: 14px;
+    }
+    .lastPage a:hover{
+        opacity: 1;
+    }
+    .lastPage p{
+        font-family: "Mochiy Pop P One", sans-serif;
+        color: #fff;
+    }
+    .material{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;            
+    }
+    .material li{
+        color: #fff;
+        opacity: .5;
+        font-family: "Mochiy Pop P One", sans-serif;
+        font-size: 14px;            
+    }
+    .material .tibame{
+        width: 100%;
+        white-space:nowrap;
+        font-size: 14px;
+        color: #fff;
+        opacity: .5;
+    }
+    .sub{
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .subs{
+        flex: 1;
+        /* margin-top: 60px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 0;
+        right: 65%;
+    }
+    .sub span{
+        white-space: nowrap;
+        display: block;
+        margin-top: 40px;
+        font-size: 14px;
+        color: #fff;
+        opacity: .5;
+    }
+    .sub > span{
+    position: relative;
+    top: 0;
+    right: 65%;
+    }
+    .subs input{
+        background-color: transparent;
+        /* width: 50%; */
+        padding: 14px 150px 14px 10px;
+        border-radius: 10px;
+        border-color: #fff;
+    }
+    .subs input:focus{
+        outline: none;
+    }
+    .subs input:focus::placeholder{
+        opacity: 1;
+    }
+    .subs input::placeholder{
+        color: #fff;
+        opacity: .5;
+        font-size: 12px;
+    }
+    .subsTxt{
+        position: absolute;
+        left: 186px;
+        top: 35px;
+    }
+    .subs a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 12px;
+        padding: 10px 7px;
+        border-radius: 5px;
+    }
+    .subs a:first-of-type{
+        background-color: #0593D7;
+    }
+    .subs a:hover:first-of-type{
+        background-color: #0C81B9;
+        color: #000;
+    }
+    .subs a:last-of-type{
+        background-color: #2E8DB9;
+    }
+    .subs a:hover:last-of-type{
+        background-color: #1A75A0;
+        color: #000;
+    }
+    .community{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        text-align: right;
+    }
+    .community .icon{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .community .icon a{
+        font-size: 24px;
+        display: inline-block;
+        color: #fff;
+        opacity: .5;
+    }
+    .community .icon a:hover{
+        opacity: 1;
+    }
+    .community .icon a+a{
+        margin-left: 20px;
+    }
+    .community span{
+        color: #fff;
+        font-size: 14px;
+        margin-top: 20px;
+    }

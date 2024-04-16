@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <style>
+        /*menu*/
+    .menu{
+        width: 30px;
+        height: 20px;
+        background-color: rgba(0, 0, 0, .3);
+        margin: auto;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+    }
+    .menu span{
+        margin: 0 auto 5px;
+        width: 30px;
+        height: 3px;
+        border-radius: 5px;
+        display: block;
+        background-color: #fff;
+    }
+    /* .menu:hover + .nav-div{
+        display: block;
+    } */
+        /*nav*/
+    .container{
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        padding: 0 15px;
+    }
+    .nav-div{
+        background-color: #0B2F47;
+        width: 100%;
+        display: none;
+        z-index: 10;
+    }
+    .nav-div .nav-wrap{
+        display: flex;
+        padding: 20px 0;
+    }
+    .nav-div .nav-wrap .nav-left{
+        flex: 70%;
+    }
+    .nav-wrap .nav-left ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .nav-wrap .nav-left li{
+        margin-left: 20px;
+    }
+    .nav-div .nav-wrap .nav-left li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: .5;
+    }
+    .nav-div .nav-wrap .nav-left li a:hover{
+        opacity: 1;
+    }
+    .nav-div .nav-wrap .nav-right{
+        flex: 30%;
+        display: flex;
+        justify-content: center;
+    }
+    .nav-div .nav-wrap .nav-right a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+        opacity: .5;
+    }
+    .nav-div .nav-wrap .nav-right a:hover{
+        opacity: 1;
+    }
+    /*title*/
+    .title-div{
+        width: 100%;
+        position: relative;
+    }
+    .title-div .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .title-div .title .title-top{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .title-div .title .title-top img{
+        vertical-align: top;
+    }
+    .title-div .title .title-top h1{
+        font-weight: bold;
+        font-size: 48px;
+        color: #fff;
+        margin-right: 40px;
+    }
+    .title-div .title p{
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        font-weight: bold;
+        margin: 20px 0;
+        font-size: 48px;
+    }
+    .title-div .title .title-bottom{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+    }
+    .title-div .title .title-bottom input{
+        background-color: transparent;
+        border-color: #fff;
+        padding: 5px 150px 5px 15px;
+        border-radius: 50px;
+        z-index: 10;
+    }
+    .title-div .title .title-bottom input:focus{
+        outline: none;
+    }
+    .title-div .title .title-bottom input:focus::placeholder{
+        opacity: 1;
+        transform: translateX(150%);
+        transition: .5s ease;
+    }
+    .title-div .title .title-bottom input::placeholder{
+        color: #fff;
+        opacity: .5;
+        transform: translateX(0%);
+    }
+    .title-div .title .title-bottom i{
+        position: relative;
+        right: 30px;
+        color:#fff;
+    }
+    .header{
+        position: relative;
+    }
+    .header #background-video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        width: 100%;
+        aspect-ratio: 16/9;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-div">
+                <div class="container">
+                    <div class="nav">
+                        <div class="nav-wrap">
+                            <div class="nav-left">
+                                <ul>
+                                    <li><a href="#">品牌理念</a></li>
+                                    <li><a href="#">目的地</a></li>
+                                    <li><a href="#">啟動計畫</a></li>
+                                    <li><a href="#">美好回憶</a></li>
+                                    <li><a href="#">聯絡我們</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav-right">
+                                <a href="login.html">登入</a>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-div">
+                <div class="container">
+                    <div class="title">
+                        <div class="title-top">
+                            <img src="pic/logo白.png" width="200" alt="Explore Taiwan">
+                            <h1>Explore Taiwan</h1>
+                        </div>
+                        <p>讓台灣的美景成為你旅行的背景！</p>
+                        <div class="title-bottom">
+                            <input type="search" placeholder="搜尋">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                </div>
+                <video src="video/index-video.mp4" id="background-video" autoplay loop muted></video>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.menu').on('click',()=>{
+            $('.nav-div').toggle();
+        })
+    </script>
+</body>
+</html>
