@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8" />
+<title>Swiper demo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="reset.css">
+
+<!-- Demo styles -->
+<style>
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-wrapper{
+    width: 100%;
+}
+@media screen and (max-width:768px){
+.leftimg img:last-of-type{
+    display: none;
+}
+.leftimg span{
+    display: none;
+}
+.swiper-slide img{
+    width: 30%;
+    margin: auto;
+}
+.swiper-slide{
+    display: block;
+    background-color: #D3F2FF;
+}
+.main-txt .Comment-title p{
+    padding: 10px;
+}
+.main-txt .Comment-title{
+    margin-top: 10px;
+}
+.Comment-message:after{
+    display: none;
+}
+}
+</style>
+</head>
+
+<body>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+<div class="swiper-wrapper">
+    <div class="swiper-slide">
+        <div class="leftimg">
+            <img src="pic/Mask group清水斷崖修改.png" width="60%" alt="清水斷崖">
+            <span><i class="fa-solid fa-location-dot"></i>清水斷崖</span>
+            <img src="pic/Mask groupblob-3.png" width="60%" alt="三仙台">
+            <span><i class="fa-solid fa-location-dot"></i>太魯閣</span>
+        </div>
+        <div class="main-txt">
+            <div class="Comment-title">
+                <h2>花東海岸魅力行</h2>
+                <p>作為一名旅客，我被台灣花東海岸的魅力所折服，壯麗的海景、迷人的沙灘和原生態的自然景觀讓我心曠神怡，友善的當地人和豐富多樣的海岸活動讓我流連忘返。我給予花東景觀極高評價，非常推薦喜歡自然生態景觀的旅人。</p>
+            </div>
+            <div class="Comment-stars">
+                <i class="fa-solid fa-angle-left"></i>
+                <img src="pic/評論星星星星數.png" width="80%">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="Comment-message">
+                <span>發佈於2024年3月28日星期四</span>
+                <span>王曉明</span>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="leftimg">
+            <img src="pic/Mask group清水斷崖修改.png" width="60%" alt="清水斷崖">
+            <span><i class="fa-solid fa-location-dot"></i>清水斷崖</span>
+            <img src="pic/Mask groupblob-3.png" width="60%" alt="三仙台">
+            <span><i class="fa-solid fa-location-dot"></i>太魯閣</span>
+        </div>
+        <div class="main-txt">
+            <div class="Comment-title">
+                <h2>花蓮海岸魅力行</h2>
+                <p>作為一名旅客，我被台灣花東海岸的魅力所折服，壯麗的海景、迷人的沙灘和原生態的自然景觀讓我心曠神怡，友善的當地人和豐富多樣的海岸活動讓我流連忘返。我給予花東景觀極高評價，非常推薦喜歡自然生態景觀的旅人。</p>
+            </div>
+            <div class="Comment-stars">
+                <i class="fa-solid fa-angle-left"></i>
+                <img src="pic/評論星星星星數.png" width="80%">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="Comment-message">
+                <span>發佈於2024年3月28日星期四</span>
+                <span>王曉明</span>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+        <div class="leftimg">
+            <img src="pic/Mask group清水斷崖修改.png" width="60%" alt="清水斷崖">
+            <span><i class="fa-solid fa-location-dot"></i>清水斷崖</span>
+            <img src="pic/Mask groupblob-3.png" width="60%" alt="三仙台">
+            <span><i class="fa-solid fa-location-dot"></i>太魯閣</span>
+        </div>
+        <div class="main-txt">
+            <div class="Comment-title">
+                <h2>宜蘭海岸魅力行</h2>
+                <p>作為一名旅客，我被台灣花東海岸的魅力所折服，壯麗的海景、迷人的沙灘和原生態的自然景觀讓我心曠神怡，友善的當地人和豐富多樣的海岸活動讓我流連忘返。我給予花東景觀極高評價，非常推薦喜歡自然生態景觀的旅人。</p>
+            </div>
+            <div class="Comment-stars">
+                <i class="fa-solid fa-angle-left"></i>
+                <img src="pic/評論星星星星數.png" width="80%">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+            <div class="Comment-message">
+                <span>發佈於2024年3月28日星期四</span>
+                <span>王曉明</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 30,
+    autoplay: false,
+});
+var prevArrow = document.querySelector('.Comment-stars>i');
+var nextArrow = document.querySelector('.Comment-stars i:last-child');
+
+// 添加點擊事件監聽器
+
+prevArrow.addEventListener('click', function() {
+    swiper.slidePrev();
+    swiper.update();
+});
+
+nextArrow.addEventListener('click', function() {
+    swiper.slideNext();
+    swiper.update();
+});
+</script>
+</body>
+
+</html>

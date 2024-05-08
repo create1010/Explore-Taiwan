@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>開始計畫</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="plan.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="customer">
+            <div class="container">
+                <div class="login">
+                    <div class="Sub-navigation">
+                        <div class="logo">
+                            <a href="index.html"><img src="pic/logo白.png" alt="logo"></a>
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="Brand.html">品牌理念</a></li>
+                                <li><a href="destination.html">目的地</a></li>
+                                <li><a href="plan.html">啟動計畫</a></li>
+                                <li><a href="Experience.html">美好回憶</a></li>
+                                <li><a href="form.html">聯絡我們</a></li>
+                            </ul>
+                        </div>
+                        <div class="login-btn">
+                            <a href="login.html">登入</a>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapList">
+            <div class="sidebarLeft">
+                <div class="topDiv">
+                    <div class="journeyTitle">
+                        <div class="container">
+                            <div class="titleField">
+                                <div class="journeyName">
+                                    <i class="fa-solid fa-arrow-left"></i>
+                                    <span>行程名稱</span>
+                                </div>
+                                <div class="edit">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <span>編輯</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journeyDate">
+                        <div class="container">
+                            <div class="dateDiv">
+                                <div class="dateTitle">
+                                    <span>旅遊日期</span>
+                                </div>
+                                <div class="download">
+                                    <a href="#"><i class="fa-solid fa-download"></i>下載PDF檔</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="journeytiDays">
+                        <div class="container">
+                            <div class="dayList">
+                                <input type="date" class="dayDiv">
+                                </input>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottomDiv">
+                    <div class="container">
+                        <div class="block">
+                            <div class="days">
+                                <div class="day">
+                                    <span>第一天</span>
+                                    <span>出發時間08:00</span>
+                                </div>
+                                <div class="week">
+                                    <span>4/4 (週四)</span>
+                                </div>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                                <span>新增景點</span>
+                            </button>
+                        </div>
+                        <div class="block">
+                            <div class="days">
+                                <div class="day">
+                                    <span>第二天</span>
+                                    <span>出發時間08:00</span>
+                                </div>
+                                <div class="week">
+                                    <span>4/5 (週五)</span>
+                                </div>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                                <span>新增景點</span>
+                            </button>
+                        </div>
+                        <div class="block">
+                            <div class="days">
+                                <div class="day">
+                                    <span>第三天</span>
+                                    <span>出發時間08:00</span>
+                                </div>
+                                <div class="week">
+                                    <span>4/6 (週六)</span>
+                                </div>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                                <span>新增景點</span>
+                            </button>
+                        </div>
+                        <div class="block">
+                            <div class="days">
+                                <div class="day">
+                                    <span>第四天</span>
+                                    <span>出發時間08:00</span>
+                                </div>
+                                <div class="week">
+                                    <span>4/7 (週日)</span>
+                                </div>
+                            </div>
+                            <button>
+                                <i class="fa-solid fa-plus"></i>
+                                <span>新增景點</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sidebarRight">
+                <div class="mapBtn">
+                    <a href="#"><i class="fa-solid fa-location-dot"></i>切換地圖</a>
+                    <a href="#"><i class="fa-regular fa-copy"></i>複製行程</a>
+                    <a href="#"><i class="fa-solid fa-share-nodes"></i>分享</a>
+                    <a href="#"><i class="fa-solid fa-link"></i>嵌入地圖</a>
+                </div>
+                <div class="map">
+                    <span>MAP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.menu').click(function() {
+                $('.Sub-navigation').toggleClass('cas');
+            });
+        });
+    
+        </script>
+</body>
+</html>

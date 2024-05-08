@@ -3,27 +3,30 @@
     *{
         font-family: "Noto Sans TC", sans-serif;
     }
-    .footer{
-    background-color: #0B2F47;
-    padding: 10px 0;
-    }
     .container{
-    max-width: 1200px;
-    width: 100%;
-    margin: auto;
-    padding: 0 15px;
-    }   
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+    }
+    .footer{
+        background-color: #0B2F47;
+        padding: 40px 0 20px;
+    }
     .footer-wrap{
         width: 100%;
         display: flex;
+        font-size: clamp(16px,1.6666vw,24px)
     }
     .footer-wrap h4{
         color: #fff;
+        font-size: 1.25rem;
+        font-weight: 700;
     }
     .lastPage{
-        flex: 1;
+        flex: 50%;
         display: flex;
         flex-direction: column;
+        margin-left: 20px;
     }
     .lastPage li{
         margin: 20px 0;
@@ -31,18 +34,18 @@
     .lastPage a{
         text-decoration: none;
         color: #fff;
-        opacity: .5;
-        font-size: 14px;
+        font-size: 1.333333vw;
     }
     .lastPage a:hover{
-        opacity: 1;
+        text-decoration: underline;
     }
     .lastPage p{
         font-family: "Mochiy Pop P One", sans-serif;
         color: #fff;
+        white-space: nowrap;
     }
     .material{
-        flex: 1;
+        flex: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;            
@@ -51,7 +54,7 @@
         color: #fff;
         opacity: .5;
         font-family: "Mochiy Pop P One", sans-serif;
-        font-size: 14px;            
+        font-size: 1.333333vw;            
     }
     .material .tibame{
         width: 100%;
@@ -62,38 +65,27 @@
     }
     .sub{
         width: 100%;
-        flex: 1;
+        flex: 50%;
         display: flex;
         flex-direction: column;
     }
     .subs{
-        flex: 1;
-        /* margin-top: 60px; */
+        flex: 50%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
-        top: 0;
-        right: 65%;
     }
     .sub span{
         white-space: nowrap;
         display: block;
-        margin-top: 40px;
-        font-size: 14px;
+        margin-top: 10%;
+        font-size: 1rem;
         color: #fff;
         opacity: .5;
     }
-    .sub > span{
-    position: relative;
-    top: 0;
-    right: 65%;
-    }
     .subs input{
         background-color: transparent;
-        /* width: 50%; */
-        padding: 14px 150px 14px 10px;
+        padding: 4% 32% 4% 2%;
         border-radius: 10px;
         border-color: #fff;
     }
@@ -106,47 +98,42 @@
     .subs input::placeholder{
         color: #fff;
         opacity: .5;
-        font-size: 12px;
     }
     .subsTxt{
-        position: absolute;
-        left: 186px;
-        top: 35px;
+        position: relative;
+        right: 6rem;
+        bottom: .3rem;
+        white-space: nowrap;
     }
     .subs a{
         text-decoration: none;
         color: #fff;
-        font-size: 12px;
-        padding: 10px 7px;
+        font-size: 1vw;
+        padding: .5rem;
         border-radius: 5px;
     }
-    .subs a:first-of-type{
-        background-color: #0593D7;
+    .subs .subsTxt a{
+        background-color: #00BCD6;
+        font-weight: 700;
+        transition: .3s;
     }
-    .subs a:hover:first-of-type{
-        background-color: #0C81B9;
-        color: #000;
-    }
-    .subs a:last-of-type{
-        background-color: #2E8DB9;
-    }
-    .subs a:hover:last-of-type{
-        background-color: #1A75A0;
-        color: #000;
+    .subs .subsTxt a:hover{
+        background-color: #fff;
+        color: #00BCD6;
     }
     .community{
         flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: end;
-        text-align: right;
+        text-align: center;
     }
     .community .icon{
         width: 100%;
         margin-bottom: 20px;
     }
     .community .icon a{
-        font-size: 24px;
+        font-size: 1.875vw;
         display: inline-block;
         color: #fff;
         opacity: .5;
@@ -159,6 +146,112 @@
     }
     .community span{
         color: #fff;
-        font-size: 14px;
+        font-size: 1rem;
         margin-top: 20px;
+    }
+    @media screen and (max-width:992px){
+        .material .tibame{
+            display: none;
+        }
+        .community span{
+            text-align: left;
+        }
+        .subs input{
+            padding: 3% 20% 3% 1%;
+        }
+        .subsTxt{
+            right: 20%;
+            bottom: 2%;
+        }
+    }
+    @media screen and (max-width:768px){
+        .footer{
+            padding-bottom: 0;
+        }
+        .footer-wrap{
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: space-between;
+        }
+        .material{
+            justify-content: space-evenly;
+        }
+        .material li{
+            font-size: 1rem;
+        }
+        .lastPage{
+            margin-left: 0;
+        }
+        .lastPage a{
+            font-size: 1rem;
+        }
+        .sub{
+            margin-top: 10px;
+        }
+        .sub span{
+            margin: 10px 0;
+        }
+        .subs input{
+            padding: 1%;
+        }
+        .subs{
+            position: relative;
+        }
+        .subsTxt{
+            position: absolute;
+            right: 41%;
+            bottom: 36%;
+        }
+        .subsTxt a{
+            padding: 20%;
+        }
+        .community .icon{
+            margin: 10px 0;
+        }
+        .community span{
+            text-align: center;
+        }
+        .community .icon a{
+            font-size: 1rem;
+        }
+    }
+    @media screen and (max-width:390px){
+        .lastPage li{
+            margin: 10px 0;
+        }
+        .lastPage p{
+            margin-bottom: 10px;
+        }
+        .material{
+            display: block;
+            border-top: 1px dashed #fff;
+        }
+        .material h4{
+            margin: 10px 0;
+        }
+        .sub{
+            display: block;
+            border-top: 1px dashed #fff;
+        }
+        .subs input{
+            width: 100px;
+            height: 10px;
+        }
+        .subs{
+            display: block;
+        }
+        .subs input{
+            width: auto;
+            height: auto;
+        }
+        .subs .subsTxt{
+            right: 31%;
+        }
+        .subs .subsTxt a{
+            font-size: .4rem;
+        }
+        .community .icon{
+            margin: 5px 0;
+        }
+        
     }

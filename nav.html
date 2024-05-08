@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><nav></nav></title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="nav.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="customer">
+    <nav class="customer">
         <div class="container">
             <div class="login">
                 <div class="Sub-navigation">
@@ -28,8 +29,22 @@
                         <a href="#">登入</a>
                     </div>
                 </div>
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
-    </div>
+    </nav>
+
+    <script>
+    $(document).ready(function() {
+        $('.menu').click(function() {
+            $('.Sub-navigation').toggleClass('cas');
+        });
+    });
+
+    </script>
 </body>
 </html>

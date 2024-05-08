@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美好經驗詳細資訊</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap');
+    .wrap{
+        width: 100%;
+    }
+    .container{
+        max-width: 800px;
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+    }
+    .cards{
+        display: none;
+    }
+    .top h2{
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .top span{
+        font-family: "Mochiy Pop P One", sans-serif;
+        font-size: 32px;
+        display: block;
+        text-align: center;
+    }
+    .top:first-child span{
+        margin-bottom: 20px;
+    }
+    .middle{
+        padding: 20px 0;
+    }
+    .middle .content{
+        display: flex;
+    }
+    .middle .content .pic{
+        flex: 50%;
+        margin: auto;
+        text-align: center;
+    }
+    .middle .content .pic img{
+        width: 100%;
+    }
+    .middle .content .text{
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+    .middle .content .text h3{
+        margin: 0;
+    }
+    .middle .content .text p{
+        letter-spacing: .2em;
+        line-height: 1.5em;
+    }
+    .middle .content .text span{
+        text-align: right;
+    }
+    .page{
+        display: flex;
+    }
+    .page .previous{
+        display: block;
+        text-decoration: none;
+        flex: 50%;
+        margin: auto;
+        font-size: 24px;
+        border: 1px solid #000;
+        border-left: none;
+        border-right-color: transparent;
+        transition: .3s ease;
+    }
+    .page .previous:hover{
+        background-color: #ccc;
+    }
+    .page .previous .previous-text{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .page .previous .previous-text .leftarrow{
+        width: 100%;
+        font-size: 32px;
+        position: relative;
+        top: -30px;
+        left: 0;
+    }
+    .page .previous .previous-text .left-txt{
+        padding: 20px 0;
+        position: relative;
+    }
+    .page .previous .previous-text .left-txt:after{
+        content: '';
+        display: block;
+        width: 200px;
+        height: 3px;
+        margin: 30px 0;
+        background-color: #000;
+        position: absolute;
+        bottom: -38%;
+        right: -34%;
+    }
+    .page .previous .previous-text .left-txt span{
+        text-decoration: none;
+        font-family: "Mochiy Pop P One", sans-serif;
+        color: #000;
+    }
+    .page .next{
+        display: block;
+        text-decoration: none;
+        flex: 50%;
+        font-size: 24px;
+        border: 1px solid #000;
+        border-right: none;
+        transition: .3s ease;
+    }
+    .page .next:hover{
+        background-color: #ccc;
+    }
+    .page .next .next-text{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .page .next .next-text .rightarrow{
+        width: 100%;
+        font-size: 32px;
+        text-align: right;
+        position: relative;
+        top: -30px;
+        right: 0;
+    }
+    .page .next .next-text .right-txt{
+        padding: 20px 0;
+        position: relative;
+    }
+    .page .next .next-text .right-txt:after{
+        content: '';
+        display: block;
+        width: 200px;
+        height: 3px;
+        margin: 30px 0;
+        background-color: #000;
+        position: absolute;
+        bottom: -38%;
+        right: -95%;
+    }
+    .page .next .next-text .right-txt span{
+        text-decoration: none;
+        color: #000;
+        font-family: "Mochiy Pop P One", sans-serif;
+    }
+    .return{
+        width: 100%;
+        padding-top: 20px;
+    }
+    .return-btn{
+        text-align: center;
+        font-size: 14px;
+    }
+    .return-btn a{
+        text-decoration: none;
+        color: #000;
+        font-weight: 700;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="card">
+                <div class="top">
+                    <h2>美好回憶</h2>
+                    <span>The best trip, the most beautiful memories</span>
+                    <span>All in this moment</span>
+                </div>
+                <div class="middle">
+                    <div class="content">
+                        <div class="pic">
+                            <img src="pic/阿里山.jpg">
+                        </div>
+                        <div class="text">
+                            <h3>阿里山</h3>
+                            <p>阿里山的靜謐山林深深吸引著我。站在觀景台眺望日出，雲霧繚繞，太陽漸漸升起，景色壯麗動人，令人心馳神往。漫步於茂密的森林中，聽著鳥鳴蟲鳴，清新的空氣充滿了山林的氣息。品嚐當地的茶品，感受茶香的醇厚，彷彿置身於世外桃源。阿里山的美景與神秘感讓我流連忘返，這趟旅程成為了我心中難以磨滅的回憶。</p>
+                            <span>遊客 陳先生 評論於2021.2.13</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="bottom-btn">
+                        <div class="page">
+                            <a href="#" class="previous">
+                                <div class="previous-text">
+                                    <div class="leftarrow">
+                                        <i class="fa-solid fa-angle-left"></i>
+                                    </div>
+                                    <div class="left-txt">
+                                    <span href="#">previous</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="next">
+                                <div class="next-text">
+                                    <div class="rightarrow">
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </div>
+                                    <div class="right-txt">
+                                        <span href="#">Next</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="return">
+                        <div class="return-btn">
+                            <a href="#"><i class="fa-solid fa-list"></i><br>返回列表</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="alert.js"></script>
+</body>
+</html>

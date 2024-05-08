@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+*{
+    font-family: "Noto Sans TC", sans-serif;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+.wrap .wrapList{
+    display: flex;
+}
+.sidebarLeft{
+    flex: 30%;
+    background-color: #0593D7;
+}
+.sidebarLeft .journeyTitle .titleField{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px 5px;
+}
+.sidebarLeft .journeyTitle .titleField .journeyName{
+    font-weight: 700;
+    margin-left: 10px;
+}
+.sidebarLeft .journeyTitle .titleField .edit{
+    font-size: 14px;
+    margin-right: 10px;
+    margin-top: 2px;
+}
+.journeyDate{
+    background: url(pic/start/Starbucks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
+    position: relative;
+}
+.journeyDate::before{
+    content: "";
+    width: 100%;
+    height: 150px;
+    display: block;
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.journeyDate .dateDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+}
+.journeyDate .dateDiv .dateTitle{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.journeyDate .dateDiv .download{
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.journeyDate .dateDiv .download a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+.journeytiDays .dayList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+}
+.leftArrow{
+    flex: 20%;
+    text-decoration: none;
+}
+.rigthArrow{
+    flex: 20%;
+    text-decoration: none;
+}
+.dayDiv{
+    flex:60%;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+.dayDiv:focus{
+    outline: none;
+}
+.sidebarLeft .bottomDiv .block{
+    display: flex;
+    flex-direction: column;
+}
+.sidebarLeft .bottomDiv .block .days{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.sidebarLeft .bottomDiv .block .day{
+    margin-left: 10px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.sidebarLeft .bottomDiv .block .day span:first-child{
+    padding: 5px;
+    background-color: #ADE1FB;
+    border-radius: 5px;
+}
+.sidebarLeft .bottomDiv .block .day span:last-child{
+    margin-left: 10px;
+}
+.sidebarLeft .bottomDiv .block .week{
+    color: #ccc;
+    margin-right: 10px;
+}
+.sidebarLeft .bottomDiv .block button{
+    width: 100%;
+    padding: 5px 0;
+    color: #ccc;
+    background-color: #fff;
+    border-color: transparent;
+}.sidebarLeft .bottomDiv .block button:active{
+    background-color: #ADE1FB;
+}
+.sidebarRight{
+    flex: 70%;
+    position: relative;
+}
+.sidebarRight .mapBtn{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.sidebarRight .mapBtn a:nth-child(3){
+    padding: 5px 20px;
+}
+.sidebarRight .mapBtn a{
+    color: #000;
+    background-color: #fff;
+    padding: 5px 7px;
+    border-radius: 50px;
+    margin: 2% 5% 2% 0;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 1px 1px 2px #000;
+}
+.sidebarRight .mapBtn i{
+    margin-right: 5px;
+}
+.sidebarRight .map{
+    width: 100%;
+    height: 100%;
+    background-color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sidebarRight .map span{
+    font-size: 72px;
+    font-weight: 700;
+}
+
+/*RWD*/
+@media screen and (max-width:992px){
+    .sidebarLeft .bottomDiv .block{
+        text-align: center;
+    }
+    .sidebarLeft .bottomDiv .block .day{
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+    .sidebarLeft .bottomDiv .block .days{
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+    .sidebarLeft .bottomDiv .block .week{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width:768px){
+    .sidebarRight .mapBtn{
+        flex-direction: column;
+        align-items: end;
+    }
+    .sidebarLeft{
+        /* display: none; */
+        position: absolute;
+        left: -12rem; 
+        z-index: 10;
+        transition: .5s ease;
+        min-width: 220px;
+    }
+    .sidebarLeft:hover{
+        left: 0;
+    }
+    .sidebarRight{
+        min-height: 606.67px;
+    }
+}

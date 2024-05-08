@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+        *{
+            font-family: "Noto Sans TC", sans-serif;
+        }
+        .main{
+            padding: 20px 0;
+        }
+        .form{
+            display: flex;
+        }
+        .form .form-left{
+            flex: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .main .contact-us{
+            padding: 40px 0 0;
+        }
+        .main h2{
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #264F64;
+            margin-bottom: 20px;
+        }
+        .form .form-left{
+            position: relative;
+        }
+        .form .form-left .phone{
+            width: 100%;
+            height: 50%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            right: 10%;
+        }
+        .form .form-left .phone:after{
+            content: '';
+            display: block;
+            width: 200px;
+            height: 230px;
+            background-color: #87CEEB;
+            padding: 5px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            z-index: -1;
+        }
+        .form .form-left .icon{
+            font-size: 48px;
+            margin-bottom: 5%;
+        }
+        .form .form-left .email{
+            width: 100%;
+            height: 50%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            top: -10%;
+            left: 10%;
+        }
+        .form .form-left .email:after{
+            content: '';
+            display: block;
+            width: 200px;
+            height: 230px;
+            background-color: #87CEEB;
+            padding: 5px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: absolute;
+            z-index: -1;
+        }
+        .form .form-right{
+            flex: 50%;
+            position: relative;
+            margin-right: 5%;
+        }
+        .form .form-right .table{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form .form-right:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #87CEEB;
+            /* clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); */
+            z-index: -1;
+            position: absolute; 
+        }
+        .form .form-right .table .table-top h3{
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            color: #264F64;
+            margin: 20px 0;
+        }
+        .form .form-right .table .table-top .write-btn{
+            width: 100%;
+            text-align: right;
+            transform: translate(-10%,-257%);
+        }
+        .form .form-right .table .table-top a{
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #0B2F47;
+            color: #fff;
+            font-weight: 700;
+            padding: 5px 7px;
+            transition: .3s ease;
+        }
+        .form .form-right .table .table-top a:hover{
+            color: #0B2F47;
+            background-color: #fff;
+        }
+        .form .form-right .table .table-top span{
+            display: block;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            font-size: 14px;
+        }
+        .form .form-right .table .table-top span::before{
+            content: '';
+            width: 300px;
+            height: 2px;
+            background-color: #000;
+            display: block;
+            margin: 5px 0 10px;
+            position: absolute;
+            top: -20%;
+            left: 20%;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            text-align: right;
+        }
+        .box-content{
+            margin: 0 auto;
+            width: fit-content;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .box:nth-child(8){
+            margin-left: 76px;
+        }
+        .box label{
+            flex-basis: 120px;
+            margin-right: 10px;
+        }
+        .box .col{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+        .box .math{
+            width: 100px;
+            height: 25px;
+            background-color: #aaa;
+        }
+        .refresh{
+            border: none;
+            background-color: transparent;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .box .math span{
+            display: block;
+            text-align: center;
+            line-height: 25px;
+            font-weight: bold;
+            transform: skew(-30deg);
+        }
+        .btn{
+            text-align: center;
+        }
+        .btn input[type="submit"]{
+            border: none;
+            width: 100%;
+            max-width: 250px;
+            margin: 10px auto;
+            color: #fff;
+            padding: 10px 30px;
+            background-color: #0B2F47;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        .btn input[type="submit"]:hover{
+            color: #0B2F47;
+            background-color: #fff;
+        }
+        .table input[type="radio"]{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 13px;
+            height: 13px;
+            border: 2px solid black;
+        }
+        .table input[type="radio"]:checked{
+            background: url(pic/check-solid.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+        .agreeBtn{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            width: 13px;
+            height: 13px;
+            border: 2px solid black;
+            margin: 0;
+        }
+        .agreeBtn:checked{
+            background: url(pic/check-solid.svg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position:center;
+        }
+        input[type="text"],[type="email"],[type="number"]:focus{
+            outline: none;
+        }
+        .box .col textarea:focus{
+            outline: none;
+        }
+        /*RWD*/
+        @media screen and (max-width:992px){
+            .main{
+                padding: 0;
+            }
+            .main .contact-us{
+                background-color: #87CEEB;
+            }
+            .form .form-left{
+                display: none;
+            }
+            .form .form-right:before{
+                display: none;
+            }
+        }
+        @media screen and (max-width:390px){
+            .form .form-right .table .table-top .write-btn{
+                transform: translate(0);
+                text-align: center;
+            }
+            .form .form-right .table .table-top span::before{
+                position: relative;
+                left:5%
+            }
+            form{
+                text-align: left;
+                margin: auto;
+                width: 90%;
+            }
+            textarea{
+                width: 90%;
+            }
+            .checkint{
+            width: 76px;
+            }
+            .box .col{
+                display: block;
+            }
+            .box label{
+                flex-basis:80px;
+                /* margin-right:2px */
+            }
+            .box:nth-child(8){
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="customer">
+            <div class="container">
+                <div class="login">
+                    <div class="Sub-navigation">
+                        <div class="logo">
+                            <a href="index.html"><img src="pic/logo白.png" alt="logo"></a>
+                        </div>
+                        <div class="nav">
+                            <ul>
+                                <li><a href="Brand.html">品牌理念</a></li>
+                                <li><a href="destination.html">目的地</a></li>
+                                <li><a href="plan.html">啟動計畫</a></li>
+                                <li><a href="Experience.html">美好回憶</a></li>
+                                <li><a href="form.html">聯絡我們</a></li>
+                            </ul>
+                        </div>
+                        <div class="login-btn">
+                            <a href="login.html">登入</a>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="container">
+                <div class="contact-us">
+                <h2>聯絡我們</h2>
+                <div class="form">
+                    <div class="form-left">
+                        <div class="phone">
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="text">
+                                <span>+02(886) 1234 5678</span>
+                            </div>
+                        </div>
+                        <div class="email">
+                            <div class="icon">
+                                <i class="fa-regular fa-envelope"></i>
+                            </div>
+                            <div class="text">
+                                <span>explore168@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-right">
+                        <div class="table">
+                            <div class="table-top">
+                                <h3>客製化需求表</h3>
+                                <div class="write-btn">
+                                    <a href="#">我要填寫</a>
+                                </div>
+                                <span>如果您有任何需求,歡迎留下您的資料,我們將會在收到您的需求後,儘快與您聯繫:</span>
+                            </div>
+                            <div class="table-content">
+                                <div class="box-content">
+                                    <form class="form-list">
+                                        <div class="box">
+                                            <label>類別</label>
+                                            <div class="col">
+                                                <div class="block">
+                                                    <input type="radio" name="journey">
+                                                    <span>行程估價</span>
+                                                </div>
+                                                <div class="block">
+                                                    <input type="radio" name="journey">
+                                                    <span>行程規劃</span>
+                                                </div>
+                                                <div class="block">
+                                                    <input type="radio" name="journey">
+                                                    <span>其他</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>旅遊地點</label>
+                                            <div class="col">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>姓名</label>
+                                            <div class="col">
+                                                <input type="text">
+                                                <div class="gander">
+                                                    <input type="radio" name="male"><span>男生</span>
+                                                    <input type="radio" name="male"><span>女生</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>連絡電話</label>
+                                            <div class="col">
+                                                <input type="number" placeholder="手機或市內電話(請加區碼)">
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>e-mail</label>
+                                            <div class="col">
+                                                <input type="email">
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>備註/需求</label>
+                                            <div class="col">
+                                                <textarea cols="30" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="box">
+                                            <label>驗證碼</label>
+                                            <div class="col">
+                                                <input class="checkint" type="text" placeholder="請輸入驗證碼">
+                                            </div>
+                                            <div class="math">
+                                                <span class="math-rand">zicohe</span>
+                                            </div>
+                                            <button class="refresh"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                        </div>
+                                        <div class="box">
+                                            <div>
+                                                <input type="checkbox" class="agreeBtn">
+                                                <span>我同意透過電子郵件接收不定期的旅遊訊息資訊。</span>
+                                            </div>
+                                        </div>
+                                        <div class="btn">
+                                            <span>
+                                                <input  type="submit" value="送出報名">
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="lastPage">
+                        <h4>目的地</h4>
+                    <ul class="place">
+                        <li><a href="#">新北</a></li>
+                        <li><a href="#">台北</a></li>
+                        <li><a href="#">桃園</a></li>
+                        <li><a href="#">台中</a></li>
+                        <li><a href="#">高雄</a></li>
+                    </ul>
+                        <p>Explore Taiwan</p>
+                    </div>
+                    <div class="material">
+                        <h4>聯絡我們</h4>
+                        <ul class="phone">
+                            <li>+02(886) 1234 5678</li>
+                        </ul>
+                        <h4>電子郵件</h4>
+                        <ul class="e-mail">
+                            <li>explore168@gmail.com</li>
+                        </ul>
+                        <div class="tibame">
+                        <p>本網站為緯育TibaMe前端工程師班第__期學員專題作品，本平台僅供學習、展示之用。</p>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <span>趕緊手刀訂閱!立即獲得用戶限定優惠及私房景點資訊!</span>
+                        <div class="subs">
+                        <input type="email" placeholder="請輸入email">
+                        <div class="subsTxt">
+                        <a href="#">訂閱電子報</a>
+                        </div>
+                        </div>
+                        <div class="community">
+                            <div class="icon">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                            </div>
+                            <span>CopyRight &copy;2024 By me All Right Resverd.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="random.js"></script>
+    <script>
+        $('.menu').click(function(){
+            $('.Sub-navigation').slideToggle();
+        })
+
+    </script>
+</body>
+</html>

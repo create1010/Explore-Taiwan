@@ -3,22 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>登入</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
-        *{
-            font-family: "Noto Sans TC", sans-serif;
-        }
+    *{
+        font-family: "Noto Sans TC", sans-serif;
+    }
         /*Sub-navigation*/
     .customer{
-        background-color: #0B2F47;
+        background: url(pic/不厭亭.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        height: 100vh;
+    }
+    .menu{
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    margin: auto;
+    padding: 5px;
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+    }
+    .menu span{
+    margin: 0 auto 5px;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    display: block;
+    background-color: #fff;
     }
     .Sub-navigation{
         width: 100%;
         display: flex;
+        background-color: #00BCD6;
     }
     .Sub-navigation .logo{
         flex: 10%;
@@ -40,17 +68,17 @@
         justify-content: space-evenly;
     }
     .Sub-navigation .nav li{
-        margin-left: 47px;
+        margin-left: 43px;
     }
     .Sub-navigation .nav li a{
         text-decoration: none;
         color: #fff;
         font-size: 20px;
-        opacity: .5;
+        font-weight: bold;
+        display: inline-block;
     }
     .Sub-navigation .nav li a:hover{
-        opacity: 1;
-        transition: .5s;
+        animation: shake .3s linear 2;
     }
     .Sub-navigation .login-btn{
         flex: 30%;
@@ -61,21 +89,21 @@
     .Sub-navigation .login-btn a{
         text-decoration: none;
         color: #fff;
+        display: inline-block;
         font-size: 20px;
-        opacity: .5;
+        font-weight: bold;
     }
     .Sub-navigation .login-btn a:hover{
-        opacity: 1;
-        transition: .5s;
+        animation: shake .3s linear 2;
     }
     /*cus-login*/
     .customer .cus-login{
         display: flex;
-        background-image: url(pic/不厭亭.png);
+        /* background-image: url(pic/不厭亭.png);
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: 50% 50%;
-        height: calc(100vh - 69.98px);
+        height: calc(100vh - 69.98px); */
     }
     .customer .cus-login .login-div{
         flex: 50%;
@@ -83,6 +111,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        height: calc(100vh - 69.98px);
     }
     .customer .cus-login .login-div .login-style{
         width: 100%;
@@ -91,11 +120,14 @@
         width: 100%;
     }
     .log-bg{
-        background-color: rgba(168, 168, 168, 0.5);
+        background-color: transparent;
+        backdrop-filter :blur(5px);
+        border: 5px outset #fff;
+        box-shadow: 2px 2px 2px #7d7d7d;
     }
     .log-bg .login-style h2{
         font-size: 32px;
-        color: #0B2F47;
+        color: #fff;
         text-align: center;
         font-weight: 700;
         margin: 20px 0;
@@ -112,22 +144,24 @@
         gap: 20px;
     }
     .log-bg .login-text .icons-method .method{
-        width: 32%;
+        width: 31%;
         text-align: center;
-        padding: 5px 0;
         background: #fff;
         border-radius: 5px;
     }
     .log-bg .login-text .icons-method .method a{
         text-decoration: none;
+        display: block;
+        padding: 10px 0;
         color: #000;
+        font-weight: 700;
         transition: .3s;
     }
     .log-bg .login-text .icons-method .method i{
         padding-right: 5px;
     }
     .log-bg .login-text .icons-method .method:hover{
-        background-color: #ccc;
+        background-color: #00BCD6;
     }
     .log-bg .login-text .icons-method .method:hover a{
         color: #fff;
@@ -138,13 +172,12 @@
         padding: 10px;
         margin: 10px 0;
         display: inline-block;
-        background-color: #0B2F47;
+        background-color: #00BCD6;
         border-radius: 50%;
         font-weight: 700;
     }
     form .material{
         width: 100%;
-
     }
     form .material .material-box{
         display: flex;
@@ -156,9 +189,11 @@
     }
     form .material .material-box input:focus::placeholder{
         transform: translatex(75%);
+        opacity: 1;
     }
     form .material .material-box input::placeholder{
-        color: #0B2F47;
+        color: #fff;
+        opacity: .5;
         transition: 1s;
     }
     form .material .material-box input{
@@ -182,16 +217,16 @@
         align-items: center;
     }
     form .check .check-rem label{
-        color: #0B2F47;
+        color: #fff;
         font-weight: bold;
     }
     form .check .forgot-pas a{
         text-decoration: none;
-        color: #0B2F47;
+        color: #fff;
         font-weight: bold;
     }
     form .check .forgot-pas a:hover{
-        color: #fff;
+        color: #00BCD6;
         opacity: .7;
     }
     form .log-btn{
@@ -203,30 +238,35 @@
         text-decoration: none;
         color: #fff;
         font-weight: 700;
-        background-color: #224E6B;
-        padding: 10px 130px;
+        background-color: #00BCD6;
+        border-radius: 10px;
+        padding: 2% 30%;
     }
     form .log-btn a:hover{
-        color: #224E6B;
+        color: #00BCD6;
         background-color: #fff;
-        opacity: .5;
     }
     form .no-rem{
         font-weight: 700;
-        color: #0B2F47;
-        text-decoration: none;
+        color: #fff;
         display: block;
         padding: 20px 0;
     }
-    .customer .cus-login .slogan{
+    form .no-rem:hover{
+        color: #00BCD6;
+    }
+    .slogan{
         flex: 50%;
+        margin: auto;
+    }
+    .slogan .slogan-txt{
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        color: #224E6B;
+        align-items: center;
+        color: #00BCD6;
         font-family: "Mochiy Pop P One", sans-serif;
-        margin-top: -13%;
+        margin-top: -20%;
     }
     .customer .cus-login .slogan span{
         letter-spacing: .1rem;
@@ -234,12 +274,109 @@
     .customer .cus-login .slogan h2{
         margin-top: 20px;
         letter-spacing: .1rem;
-        font-size: 32px;
+        font-size: 2.6666vw;
+    }
+    @keyframes shake{
+        0%{
+            transform: skew(0,0);
+        }
+        25%{
+            transform: skew(30deg,0);
+        }
+        75%{
+            transform: skew(-30deg,0);
+        }
+        100%{
+            transform: skew(0,0);
+        }
+    }
+    @media screen and (max-width:992px){
+        .Sub-navigation .nav li{
+            margin: 0;
+        }
+        .Sub-navigation .menu{
+            display: none;
+        }
+    }
+    @media screen and (max-width:768px){
+        .slogan{
+            display: none;
+        }
+        .log-bg .login-style h2{
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .log-bg .login-text .icons-method{
+            gap: 10px;
+        }
+        .log-bg .login-text .icons-method .method{
+            width: 32%;
+        }
+        form .check{
+            margin: 10px auto;
+        }
+        form .no-rem{
+            padding: 0;
+            margin-bottom: 10px;
+        }
+        .Sub-navigation{
+            display: block;
+            position: absolute;
+            top: 6%;
+            background-color: #00BCD6;
+            display: none;
+            z-index: 200;
+        }
+        .Sub-navigation .logo{
+            width: 30%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .Sub-navigation .nav ul{
+            display: block;
+            text-align: center;
+            letter-spacing: 1em;
+        }
+        .Sub-navigation .nav li{
+            border-top: 1px solid #fff;
+        }
+        .Sub-navigation .nav li a{
+            width: 100%;
+            height: 100%;
+            padding: 5px 0;
+        }
+        .Sub-navigation .login-btn{
+            display: block;
+            text-align: center;
+            letter-spacing: 1em;
+            border-top: 1px solid #fff;
+        }
+        .Sub-navigation .login-btn a{
+            padding: 5px 0;
+            width: 100%;
+            height: 100%;
+        }
+        .login .menu{
+            display: block;
+        }
+        .menu, .cas{
+            display: block;
+        }
+
+    }
+    @media screen and (max-width:390px){
+        .log-bg .login-text .icons-method .method{
+            width: 39%;
+        }
+        .log-bg{
+            margin: 0 10px;
+        }
     }
     </style>
 </head>
 <body>
-    <div class="customer">
+
+    <nav class="customer">
         <div class="container">
             <div class="login">
                 <div class="Sub-navigation">
@@ -248,20 +385,24 @@
                     </div>
                     <div class="nav">
                         <ul>
-                            <li><a href="#">品牌理念</a></li>
-                            <li><a href="#">目的地</a></li>
-                            <li><a href="#">啟動計畫</a></li>
+                            <li><a href="Brand.html">品牌理念</a></li>
+                            <li><a href="destination.html">目的地</a></li>
+                            <li><a href="plan.html">啟動計畫</a></li>
                             <li><a href="Experience.html">美好回憶</a></li>
-                            <li><a href="#">聯絡我們</a></li>
+                            <li><a href="form.html">聯絡我們</a></li>
                         </ul>
                     </div>
                     <div class="login-btn">
                         <a href="#">登入</a>
                     </div>
                 </div>
+                <div class="menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <div class="cus-login">
-
                 <div class="login-div">
                     <div class="log-bg">
                         <div class="login-style">
@@ -301,19 +442,31 @@
                                 <div class="log-btn">
                                     <a href="#">登入</a>
                                 </div>
-                                <a class="no-rem" href="#">不記得?立即註冊</a>
+                                <a class="no-rem" href="#">會員註冊</a>
                             </form>
                         </div>
                         </div>
-
+        
                     </div>
                 </div>
                 <div class="slogan">
+                    <div class="slogan-txt">
                     <span>Travel with Heart,</span>
                     <h2>Discover Life's Beauty</h2>
                 </div>
+                </div>
             </div>
         </div>
-    </div>
+    </nav>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.menu').click(function() {
+                $('.Sub-navigation').toggleClass('cas');
+            });
+        });
+    
+        </script>
 </body>
 </html>

@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mochiy+Pop+One&family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+/*header*/
+.title{
+    background: url(pic/首圖修改.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    height: 80vh;
+    display: flex;
+}
+.titleContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.titleContent h1{
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: -10%;
+    margin-bottom: 20px;
+}
+.titleContent span{
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    margin-bottom: 20px;
+}
+.titleContent .search{
+    display: flex;
+    position: relative;
+    margin-bottom: 20px;
+}
+.titleContent .search input{
+    border-radius: 50px;
+    background-color: transparent;
+    border:1px solid #fff;
+    padding: 13px 102px 13px 10px;
+    width: 400px;
+}
+.titleContent .search input:focus{
+    outline: none;
+}
+.titleContent .search .searBtn{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    position: absolute;
+    right: 2%;
+    top: 15%;
+}
+.titleContent .search .searBtn a{
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #00BCD6;
+    padding: 8px 30px;
+    font-weight: 700;
+    transition: .3s ease;
+}
+.titleContent .search .searBtn a:hover{
+    color: #00BCD6;
+    background-color: #fff;
+}
+.cookie{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.cookie a{
+    text-decoration: none;
+    display: block;
+    margin: 0 20px;
+    border: none;
+    font-weight: 700;
+    color: #000;
+    background-color: #eee;
+    padding: 8px 20px;
+    border-radius: 50px;
+}
+.cookie a:hover{
+    background-color: #ccc;
+}
+/*section1*/
+.section1{
+    background-color: #87CEEB;
+    padding: 20px 0;
+}
+.section1 .place{
+    margin: auto;
+}
+.place h2{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.section1 .place .card-list{
+    display: flex;
+    justify-content: center;
+}
+.card-list .card{
+    width: 270px;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    position: relative;
+}
+.card-list .card::before{
+    content: '';
+    display: block;
+    background-image: url(pic/destination/addicon-animationsvg.svg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-color: #fff;
+    background-position: center;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    cursor: pointer;
+}
+.card-list .card .pic{
+    width: 100%;
+    text-align: center;
+}
+.card-list .card .pic img{
+    width: 95%;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+.card-list .card .text h3{
+    padding-left: 3%;
+    margin: 5px 0;
+    letter-spacing: .1em;
+}
+.card-list .card .text .score{
+    display: flex;
+    padding-left: 3%;
+    margin-bottom: 5px;
+}
+.card-list .card .text .score .number{
+    padding-left: 10px;
+    font-size: 14px;
+}
+.card-list .card .text span{
+    display: block;
+    padding-left: 3%;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+.card-list .card .text p{
+    padding-left: 3%;
+    margin-bottom: 5px;
+    letter-spacing: .1em;
+    line-height: 1.2em;
+}
+.card-list .card .text p a{
+    color: #000;
+}
+.section1 .place .moreBtn{
+    width: 100%;
+    text-align: right;
+    margin: 20px 0;
+    transform: translateX(-2%);
+}
+/*section2*/
+.section2{
+    background-color: #ccc;
+    padding: 20px 0;
+}
+.transportation h2{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.transportation .canvas{
+    display: flex;
+    justify-content: center;
+}
+.transportation .canvas .block{
+    width: 210px;
+    margin: 0 10px;
+    background-color: #00BCD6;
+    clip-path:polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    padding: 20px 0;
+    display: flex;
+}
+.transportation .canvas .block .Options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.block .Options .pic{
+    width: 100%;
+    margin: auto;
+}
+.block .Options .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.block .Options .txt{
+    width: 100%;
+    text-align: center;
+    transform: translateY(-100%);
+}
+.block .Options .txt span{
+    font-weight: 700;
+    color: #fff;
+    font-size: 20px;
+}
+/*section3*/
+.section3 .food h2{
+    font-size: 32px;
+    text-align: center;
+    font-weight: 700;
+    padding: 20px 0;
+}
+.food .area-wrap{
+    width: 100%;
+    height: 60px;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
+}
+.food .area-wrap .area{
+    display: flex;
+    justify-content: center;
+    
+}
+.food .area-wrap .area li{
+    margin: 0 30px;
+    line-height: 60px;
+}
+.food .area-wrap .area li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+.food .area-wrap .area li a:hover{
+    background-color: #00BCD6;
+}
+.food .foodcontent{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px;
+}
+.food .foodcontent .content{
+    width: 570px;
+    background-color: #87CEEB;
+    display: flex;
+    padding: 10px 5px;
+}
+.content .picture{
+    flex: 30%;
+    margin: auto;
+}
+.content .picture img{
+    width: 80%;
+    vertical-align: middle;
+}
+.content .text{
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content .text h3{
+    font-weight: 700;
+    font-size: 20px;
+}
+.content .text .Comment{
+    display: flex;
+}
+.content .text .introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.content .text .introduction p{
+    font-weight: 500;
+    letter-spacing: .1em;
+    line-height: 1.5;
+}
+.content .text .introduction a{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    transform: translateX(-10%);
+}
+.food .moreBtn{
+    width: 100%;
+    margin: 20px 0;
+    text-align: right;
+    transform: translateX(-1%);
+}
+/*section4*/
+.section4{
+    background-color: #ccc;
+}
+.rest{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.rest h2{
+    font-size: 32px;
+    margin: 20px 0;
+    font-weight: 700;
+    text-align: center;
+}
+.box-list{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+.box-list .box{
+    width: 100%;
+    position: relative;
+}
+.box-list .box-1{
+    grid-column: span 2;
+    width: 100%;
+}
+.box-1:after{
+    content: '台北 Taipei';
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.box-2:after{
+    content: '桃園 Taoyuan ';
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.box-3:after{
+    content: '台中 Taichung ';
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.box-4:after{
+    content: '台南 Tainan';
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.box-5:after{
+    content: '高雄 Kaohsiung ';
+    display: block;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+.box-list .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+.rest .moreBtn{
+    width: 100%;
+    text-align: right;
+    margin: 20px 0;
+    transform: translateX(-11%);
+}
+.moreBtn a{
+    font-weight: bold;
+    font-family: "Mochiy Pop P One", sans-serif;
+    color: #000;
+    font-size: 14px;
+    text-decoration: none;
+}
+/*section5*/
+.section5{
+    background-color: #87CEEB;
+}
+.service{
+    margin-top: 20px;
+}
+.service-wrap{
+    padding: 40px 20px;
+}
+.service-wrap h2{
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+
+}
+.service-wrap .service{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.service-wrap .service .safe{
+    display: flex;
+    flex-direction: column;
+}
+.service-wrap .service .cus{
+    display: flex;
+    flex-direction: column;
+}
+.service-wrap .service .img{
+    width: 50%;
+    margin: auto;
+}
+.service-wrap .service .img img{
+    width: 100%;
+    vertical-align: middle;
+}
+.service-wrap .service .text{
+    text-align: center;
+    padding: 20px 0;
+}
+.service-wrap .service .text h3{
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.service-wrap .service .text p{
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+/*RWD*/
+@media screen and (max-width:992px){
+    .cookie{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .cookie a{
+        margin: 0 10px;
+    }
+    .food .foodcontent .content{
+        width: 70%; 
+    }
+    .box-list{
+        grid-template-columns:25vw 25vw 25vw;
+    }
+}
+@media screen and (max-width:768px){
+    .section1 .place .card-list{
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .card-list .card{
+        width: 300px;
+        margin: 0;
+    }
+    .section1 .place .moreBtn{
+        text-align: center;
+        transform: translate(0);
+    }
+    .transportation .canvas{
+        flex-wrap: wrap;
+    }
+    .food .area-wrap .area li{
+        margin: 0;
+    }
+    .food .moreBtn{
+        transform: translate(0);
+        text-align: center;
+    }
+    .rest .moreBtn{
+        text-align: center;
+        transform: translate(0);
+    }
+    .service-wrap .service{
+        display: block;
+    }
+    .service-wrap .service .text p{
+        text-align: center;
+    }
+    .service-wrap .service .safe{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width:390px){
+    .titleContent h1{
+        font-size: 24px;
+    }
+    .titleContent span{
+        font-size: 16px;
+    }
+    .titleContent .search input{
+        width: auto;
+        padding: 7px 60px 7px 4px;
+    }
+    .titleContent .search .searBtn a{
+        padding: 5px 10px;
+    }
+    .content .picture img{
+        width: fit-content;
+    }
+    .content .text{
+        margin-left: 10px;
+    }
+    .area-wrap .area{
+        display: none;
+    }
+    .area-wrap select{
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .area-wrap select:focus{
+        outline: none;
+    }
+    .food .foodcontent .content{
+        width: 100%;
+    }
+    .box-list{
+        grid-template-columns:1fr;
+        grid-template-rows:repeat(5,1fr)
+    }
+    .box-list .box-1{
+        grid-column:1;
+    }
+    .box-list .box img{
+        border-radius: 0;
+    }
+    .box-1:after{right: 40%;}
+    .box-2:after{right: 40%;}
+    .box-3:after{right: 40%;}
+    .box-4:after{right: 40%;}
+    .box-5:after{right: 40%;}
+}

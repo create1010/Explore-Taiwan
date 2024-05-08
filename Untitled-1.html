@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    /* 根據你的需求設計彈跳頁的樣式 */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+    .wrap {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+    <div class="container">
+        <div class="card">
+            <div class="top">
+                <h2>美好回憶</h2>
+                <span>The best trip, the most beautiful memories</span>
+                <span>All in this moment</span>
+            </div>
+            <div class="middle">
+                <div class="content">
+                    <div class="pic">
+                        <img src="pic/淡水老街.jpg">
+                    </div>
+                    <div class="text">
+                        <h3>淡水老街</h3>
+                        <p>淡水一日遊帶給我無盡的驚喜與愉悅。徜徉於老街巷弄中，濃厚的歷史氣息令人心曠神怡；品嚐當地美食，深刻體驗了淡水文化的獨特魅力。沿著淡水河岸漫步，欣賞著美麗的夕陽，頓時感受到了寧靜和美好。淡水老街，是淡水這座迷人小鎮的靈魂所在，散發著濃郁的人情味與古韻，讓我流連忘返。</p>
+                        <span>遊客 李先生 評論於2020.10.10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="bottom-btn">
+                    <div class="page">
+                        <a href="#" class="previous">
+                            <div class="previous-text">
+                                <div class="leftarrow">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </div>
+                                <div class="left-txt">
+                                <span href="#">previous</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="next">
+                            <div class="next-text">
+                                <div class="rightarrow">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </div>
+                                <div class="right-txt">
+                                    <span href="#">Next</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="return">
+                    <div class="return-btn">
+                        <a href="#"><i class="fa-solid fa-list"></i><br>返回列表</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="modal"></div>
+
+<script>
+// 獲取彈跳頁和 cardImg 元素
+var modal = document.getElementById('modal');
+var cardImgs = document.querySelectorAll('.card .pic img');
+
+// 監聽 cardImg 點擊事件
+cardImgs.forEach(function(cardImg) {
+    cardImg.addEventListener('click', function() {
+        // 動態生成彈跳頁的 HTML
+        var modalContent = `
+            <div class="wrap">
+                <div class="container">
+                    <div class="card">
+                        <div class="top">
+                            <h2>美好回憶</h2>
+                            <span>The best trip, the most beautiful memories</span>
+                            <span>All in this moment</span>
+                        </div>
+                        <div class="middle">

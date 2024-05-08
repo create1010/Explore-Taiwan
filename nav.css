@@ -3,7 +3,33 @@
     font-family: "Noto Sans TC", sans-serif;
 }
 .customer{
-    background-color: #0B2F47;
+    background-color: #00BCD6;
+}
+.menu{
+    width: 30px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, .3);
+    margin: auto;
+    padding: 5px;
+    position: absolute;
+    top: .5%;
+    right: 2%;
+    z-index: 100;
+    cursor: pointer;
+    display: none;
+}
+.menu span{
+    margin: 0 auto 5px;
+    width: 30px;
+    height: 3px;
+    border-radius: 5px;
+    display: block;
+    background-color: #fff;
+}
+.customer .login{
+    min-height: 41.51px;
+    height: auto;
 }
 .Sub-navigation{
     width: 100%;
@@ -28,18 +54,15 @@
     display: flex;
     justify-content: space-evenly;
 }
-.Sub-navigation .nav li{
-    margin-left: 47px;
-}
 .Sub-navigation .nav li a{
     text-decoration: none;
+    display: inline-block;
     color: #fff;
     font-size: 20px;
-    opacity: .5;
+    font-weight: bold;
 }
 .Sub-navigation .nav li a:hover{
-    opacity: 1;
-    transition: .5s;
+    animation: shake .3s linear 2;
 }
 .Sub-navigation .login-btn{
     flex: 30%;
@@ -49,11 +72,76 @@
 }
 .Sub-navigation .login-btn a{
     text-decoration: none;
+    display: inline-block;
     color: #fff;
     font-size: 20px;
-    opacity: .5;
+    font-weight: bold;
 }
 .Sub-navigation .login-btn a:hover{
-    opacity: 1;
-    transition: .5s;
+    animation: shake .3s linear 2;
 }
+@keyframes shake{
+    0%{
+        transform: skew(0,0);
+    }
+    25%{
+        transform: skew(10deg,0);
+    }
+    75%{
+        transform: skew(-10deg,0);
+    }
+    100%{
+        transform: skew(0,0);
+    }
+}
+/*RWD*/
+    @media screen and (min-width:1200px){
+        .Sub-navigation{
+            display: flex;
+        }
+    }
+    @media screen and (max-width:768px){
+        .Sub-navigation{
+            display: block;
+            position: absolute;
+            top: 6%;
+            background-color: #00BCD6;
+            display: none;
+            z-index: 200;
+        }
+        .Sub-navigation .logo{
+            width: 30%;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .Sub-navigation .nav ul{
+            display: block;
+            text-align: center;
+            letter-spacing: 1em;
+        }
+        .Sub-navigation .nav li{
+            border-top: 1px solid #fff;
+        }
+        .Sub-navigation .nav li a{
+            width: 100%;
+            height: 100%;
+            padding: 5px 0;
+        }
+        .Sub-navigation .login-btn{
+            display: block;
+            text-align: center;
+            letter-spacing: 1em;
+            border-top: 1px solid #fff;
+        }
+        .Sub-navigation .login-btn a{
+            padding: 5px 0;
+            width: 100%;
+            height: 100%;
+        }
+        .login .menu{
+            display: block;
+        }
+        .menu, .cas{
+            display: block;
+        }
+    }

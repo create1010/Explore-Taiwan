@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Explore Taiwan</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 <body>
     <div class="wrap">
@@ -18,17 +19,17 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="nav-div">
+            <nav class="nav-div">
                 <div class="container">
                     <div class="nav">
                         <div class="nav-wrap">
                             <div class="nav-left">
                                 <ul>
-                                    <li><a href="#">品牌理念</a></li>
-                                    <li><a href="#">目的地</a></li>
-                                    <li><a href="#">啟動計畫</a></li>
+                                    <li><a href="Brand.html">品牌理念</a></li>
+                                    <li><a href="destination.html">目的地</a></li>
+                                    <li><a href="plan.html">啟動計畫</a></li>
                                     <li><a href="Experience.html">美好回憶</a></li>
-                                    <li><a href="#">聯絡我們</a></li>
+                                    <li><a href="form.html">聯絡我們</a></li>
                                 </ul>
                             </div>
                             <div class="nav-right">
@@ -37,7 +38,7 @@
                     </div>
                     </div>
                 </div>
-            </div>
+            </nav>
             <div class="title-div">
                 <div class="container">
                     <div class="title">
@@ -56,7 +57,7 @@
             </div>
         </div>
         <!--section-->
-        <div class="main">~
+        <div class="main">
             <div class="kv">
                 <div class="container">
                     <div class="foodImg">
@@ -95,13 +96,13 @@
                             </div>
                         </div>
                         <div class="cradBigimg">
-                            <img src="pic/高雄 1section-1 img.png">
+                            <img src="pic/高雄 1高雄.png">
                             <img src="pic/步道 1section-2 img.png">
                         </div>
                         <div class="sidetxt">
                                 <h3>為什麼要選擇Explore Taiwan</h3>
                                 <p>我們有什麼特別之處</p>
-                            <p>Explore Taiwan為新世代專為台灣國內旅遊規劃的網站，目的在讓國人更認識自己出生的地方，同時也促進經濟的成長，簡單前顯易懂的Logo，適用於所有的年齡層，我們也很樂意為所有旅客協助規劃，讓每趟旅程的回憶深得你心。</p>
+                            <p>Explore Taiwan為新世代專為台灣國內旅遊規劃的網站，目的在讓國人更認識自己出生的地方，同時也促進經濟的成長，簡單前顯易懂/的Logo，適用於所有的年齡層，我們也很樂意為所有旅客協助規劃，讓每趟旅程的回憶深得你心。</p>
                         </div>
                     </div>
                 </div>
@@ -187,7 +188,7 @@
                                 Taiwan,Jiufen
                             </div>
                         </div>
-                        <div class="cards">
+                        <div class="cart">
                             <div class="card-item">
                                 <div class="card-pic">
                                     <img src="pic/九份老街1-fotor-2024041114458.png" width="250px" height="350px" alt="九份老街">
@@ -195,7 +196,7 @@
                                 <div class="card-text">
                                     <span>新北市 </span>
                                     <h4>九份老街</h4>
-                                    <button>詳情資訊</button>
+                                    <a href="#">詳情資訊</a>
                                 </div>
                             </div>
                             <div class="card-item">
@@ -205,7 +206,7 @@
                                 <div class="card-text">
                                     <span>台北市 </span>
                                     <h4>象山</h4>
-                                    <button>詳情資訊</button>
+                                    <a href="#">詳細資訊</a>
                                 </div>
                             </div>
                         </div>
@@ -262,8 +263,8 @@
                     </div>
                     <div class="sec5-bottom">
                         <div class="sec5b-title">
-                            <span>留心這些，享受無憂之旅</span>
                             <h3>旅遊指南針</h3>
+                            <span>留心這些，享受無憂之旅</span>
                         </div>
                         <div class="sec5b-content">
                             <div class="sec5b-item">
@@ -291,7 +292,7 @@
                         </div>
                     </div>
                     <div class="jump">
-                        <a href="#" class="jump-btn"></a>
+                        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
                     </div>
                 </div>
 
@@ -352,7 +353,6 @@
                         <input type="email" placeholder="請輸入email">
                         <div class="subsTxt">
                         <a href="#">訂閱電子報</a>
-                        <a href="#">取消訂閱</a>
                         </div>
                         </div>
                         <div class="community">
@@ -370,9 +370,16 @@
         </div>
     </div>
     <script>
-        $('.menu').on('click',()=>{
-            $('.nav-div').slideToggle();
-        })
+$(document).ready(function() {
+    $('.menu').click(function() {
+        if($('.nav-div').css("display") === "none") {
+            $('.nav-div').css("display", "block");
+        } else {
+            $('.nav-div').css("display", "none");
+        }
+    });
+});
+
     </script>
 </body>
 </html>
