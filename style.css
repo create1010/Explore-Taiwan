@@ -1044,16 +1044,6 @@
         .section1 .sec1{
             flex-wrap: wrap;
         }
-        /* .card-list{
-        width: 100%;
-        text-align: center;
-        }
-        .cradBigimg{
-        width: 100%;
-        display: flex;
-        gap: 10px;
-        box-sizing: border-box;
-        } */
         .section1 .sec1{
             display: block;
         }
@@ -1141,5 +1131,87 @@
         }
         .sec5-bottom{
             margin-top: 20px;
+        }
+    }
+    @media screen and (max-width:390px){
+        .title-div .title .title-top{
+            display: block;
+            text-align: center;
+        }
+        .title-div .title .title-top h1{
+            margin-right: 0;
+            font-size: 1.5rem;
+        }
+        .title-div .title p{
+            font-size: 1.5rem;
+        }
+        .title-div .title .title-bottom input{
+            width:70%;
+            padding-right: 30px;
+        }
+        .title-div .title .title-bottom i{
+            position: absolute;
+            right: 18%;
+        }
+        .sec2 .sec2-card{
+            width: 100%;
+        }
+        .sec2-card .block{
+            margin-bottom: 20px;
+        }
+        .sec3 .leftimg{
+            margin-bottom: 20px;
+        }
+        .main-txt .Comment-title p{
+            padding: 10px;
+        }
+        .Comment-message:after{
+            display: none;
+        }
+        .cards .map{
+            display: none;
+        }
+        .decorate{
+            height: 150px;
+        }
+        .content-list .sec5-content{
+            display: block;
+            margin: 0 auto 10px;
+            width: 90%;
+        }.sec5-content .sec5-txt{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .sec5-content .picture{
+            width: 100%;
+        }
+        .sec5-content .picture img{
+            width: 100%;
+        }
+        .sec5-txt h3{
+            flex: 50%;
+        }
+        .sec5-txt p{
+            flex: 50%;
+        }
+        .sec5-bottom{
+            margin-top: 40px;
+        }
+        .content-list .sec5-content:nth-child(1):before{
+            display: none;
+        }
+        .content-list .sec5-content:nth-child(3):before{
+            display: none;
+        }
+        .content-list .sec5-content:nth-child(2){
+            margin: 0 auto 10px;
+        }
+        .sec5b-content .sec5b-item:first-child{
+            margin-right: 0;
+        }
+        .sec5b-content .sec5b-item:last-child{
+            margin-left: 0;
         }
     }

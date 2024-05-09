@@ -151,10 +151,9 @@
             height: 2px;
             background-color: #000;
             display: block;
-            margin: 5px 0 10px;
+            margin: 5px auto 10px;
             position: absolute;
             top: -20%;
-            left: 20%;
         }
         form{
             display: flex;
@@ -168,6 +167,7 @@
         }
         .box{
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
             margin-bottom: 10px;
@@ -277,28 +277,25 @@
             }
             .form .form-right .table .table-top span::before{
                 position: relative;
-                left:5%
             }
             form{
                 text-align: left;
                 margin: auto;
-                width: 90%;
-            }
-            textarea{
-                width: 90%;
-            }
-            .checkint{
-            width: 76px;
             }
             .box .col{
                 display: block;
             }
             .box label{
                 flex-basis:80px;
-                /* margin-right:2px */
             }
             .box:nth-child(8){
                 margin: 0;
+            }
+            .box:nth-child(7){
+                gap: 10px;
+            }
+            .refresh{
+                margin-right: 0;
             }
         }
     </style>
