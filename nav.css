@@ -3,7 +3,7 @@
     font-family: "Noto Sans TC", sans-serif;
 }
 .customer{
-    background-color: #00BCD6;
+    background-color: #0B2F47;
 }
 .menu{
     width: 30px;
@@ -105,7 +105,7 @@
             display: block;
             position: absolute;
             top: 6%;
-            background-color: #00BCD6;
+            background-color: #0B2F47;
             display: none;
             z-index: 200;
         }
