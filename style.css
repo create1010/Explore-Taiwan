@@ -1117,6 +1117,9 @@
             flex-wrap: wrap;
             justify-content: end;
         }
+        .content-list .sec5-content:nth-child(1):before{
+            display: none;
+        }
         .content-list{
             display: block;
         }

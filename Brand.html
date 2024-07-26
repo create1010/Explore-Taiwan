@@ -1,651 +1,768 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>關於我們</title>
-        <link rel="stylesheet" href="nav.css">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="footer.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
-            @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
-            *{
-                font-family: "Noto Sans TC", sans-serif;
-            }
-            .title{
-                width: 100%;
-                height: 100vh;
-                max-height: 800px;
-                background: url(pic/台灣合歡山.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
-            .title-wrap{
-                width: 60%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transform: translate(35%);
-            }
-            .title-wrap .title-img{
-                flex: 10%;
-                min-width: 170px;
-            }
-            .title-wrap .title-img img{
-                width: 100%;
-                vertical-align: middle;
-            }
-            .title-wrap h1{
-                flex: 50%;
-                font-size: 4vw;
-                color: #fff;
-                font-family: "Mochiy Pop P One", sans-serif;
-                white-space: nowrap;
-            }
-            /*kv*/
-            .kv{
-                background-color: #ccc;
-                width: 100%;
-            }
-            .kv-wrap{
-                width: 100%;
-                padding: 30px 0 130px;
-            }
-            .kv-wrap .kv-content{
-                width: 100%;
-                padding: 40px 0 20px;
-            }
-            .kv-wrap .kv-content .kv-block{
-                flex: 50%;
-                display: flex;
-            }
-            .kv-wrap .kv-content .kv-block .kv-img{
-                flex: 50%;
-                position: relative;
-            }
-            .kv-wrap .kv-content .kv-block:first-child .kv-img img{
-                width: 50%;
-                vertical-align: middle;
-                transform: translate(90%,15%) rotate(-5deg);
-            }
-            .kv-wrap .kv-content .kv-block:first-child .kv-img::before{
-                content: '';
-                width:200px;
-                height: 200px;
-                background-color: #009BDF;
-                display: block;
-                position: absolute;
-                right: 0;
-                top: 35%;
-            }
-            .kv-wrap .kv-content .kv-block .kv-text{
-                flex: 50%;
-            }
-            .kv-wrap .kv-content .kv-block:first-child{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-bottom: 20px;
-            }
-            .kv-wrap .kv-content .kv-block:first-child .kv-text{
-                margin-left: 5%;
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Noto+Sans+TC&display=swap');
+
+        * {
+            font-family: "Noto Sans TC", sans-serif;
+        }
+
+        .title {
+            width: 100%;
+            height: 100vh;
+            max-height: 800px;
+            background: url(pic/台灣合歡山.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title-wrap {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translate(35%);
+        }
+
+        .title-wrap .title-img {
+            flex: 10%;
+            min-width: 170px;
+        }
+
+        .title-wrap .title-img img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .title-wrap h1 {
+            flex: 50%;
+            font-size: 4vw;
+            color: #fff;
+            font-family: "Mochiy Pop P One", sans-serif;
+            white-space: nowrap;
+        }
+
+        /*kv*/
+        .kv {
+            background-color: #ccc;
+            width: 100%;
+        }
+
+        .kv-wrap {
+            width: 100%;
+            padding: 30px 0 130px;
+        }
+
+        .kv-wrap .kv-content {
+            width: 100%;
+            padding: 40px 0 20px;
+        }
+
+        .kv-wrap .kv-content .kv-block {
+            flex: 50%;
+            display: flex;
+        }
+
+        .kv-wrap .kv-content .kv-block .kv-img {
+            flex: 50%;
+            position: relative;
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child .kv-img img {
+            width: 50%;
+            vertical-align: middle;
+            transform: translate(90%, 15%) rotate(-5deg);
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child .kv-img::before {
+            content: '';
+            width: 200px;
+            height: 200px;
+            background-color: #009BDF;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 35%;
+        }
+
+        .kv-wrap .kv-content .kv-block .kv-text {
+            flex: 50%;
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child .kv-text {
+            margin-left: 5%;
+
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .kv-wrap .kv-content .kv-block:first-child p {
+            width: 50%;
+            line-height: 2em;
+            letter-spacing: .1em;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child h3 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child p {
+            line-height: 2em;
+            letter-spacing: .1em;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child .textContent {
+            width: 100%;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text {
+            width: 40%;
+            transform: translate(85%, 30%);
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child .kv-img {
+            margin-left: 5%;
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child .kv-img img {
+            width: 70%;
+            vertical-align: middle;
+            transform: translate(-73%, 45%);
+        }
+
+        .kv-wrap .kv-content .kv-block:last-child .kv-img::before {
+            content: '';
+            width: 300px;
+            height: 200px;
+            background-color: #66D8CD;
+            display: block;
+            position: absolute;
+            bottom: -64%;
+            left: -48%;
+        }
+
+        /*section1*/
+        .section1 {
+            background: url(pic/海bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 10px 0;
+        }
+
+        .section1 .sec1-top {
+            text-align: center;
+        }
+
+        .section1 .sec1-top span {
+            font-size: 2rem;
+            display: block;
+            padding: 10px 0;
+            color: #fff;
+        }
+
+        .section1 .sec1-top h2 {
+            font-size: 32px;
+            padding: 10px 0;
+            color: #fff;
+            font-family: "Mochiy Pop P One", sans-serif;
+        }
+
+        .section1 .sec1-top h2:before {
+            content: '';
+            display: block;
+            width: 70%;
+            margin: auto;
+            border-top: 1px solid #fff;
+            padding: 5px 0;
+        }
+
+        .card-list {
+            display: flex;
+        }
+
+        .card-list .card {
+            background-color: rgba(0, 0, 0, .5);
+            margin: 5px 15px 20px;
+            padding: 10px 20px 20px;
+            color: #fff;
+            transition: .3s ease;
+        }
+
+        .card-list .card:hover {
+            animation: flashing .5s linear;
+        }
+
+        .card-list .card .card-title {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            margin: 10px;
+        }
+
+        .card-list .card .card-title h3 {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .card-list .card p {
+            padding: 10px 5px 5px;
+            line-height: 1.2em;
+            letter-spacing: .1em;
+        }
+
+        /*section2*/
+        .section2 {
+            background-color: #ADE1FB;
+            position: relative;
+        }
+
+        .section2 .sec2-top {
+            padding: 20px 0;
+        }
+
+        .section2 .sec2-top h2 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            padding: 20px 0;
+        }
+
+        .section2 .sec2-top h2::before {
+            content: '';
+            display: block;
+            width: 70%;
+            height: 1px;
+            background-color: #000;
+            margin: 20px auto 50px;
+        }
+
+        .circle {
+            margin: 20px 0;
+        }
+
+        .circle .circle-list {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .circle .circle-item .circleImg {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            border: 5px solid #fff;
+            box-shadow: 1px 1px 5px #000;
+            transform: rotate(0) scale(1);
+            transition: .5s ease;
+        }
+
+        .circle .circle-item .circleImg:hover {
+            transform: rotate(-45deg) scale(1.3);
+        }
+
+        .circle-item:hover .sloganTxt {
+            display: none;
+        }
+
+        .circle .circle-item img {
+            vertical-align: middle;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            transition: .5s ease;
+
+        }
+
+        .circle .circle-item .sloganTxt {
+            text-align: center;
+            position: relative;
+            top: -50%;
+            transition: .3s ease;
+        }
+
+        .circle .circle-item span {
+            display: block;
+            color: #fff;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: .3em;
+            font-family: "Mochiy Pop P One", sans-serif;
+        }
+
+        .sec2-bottom .introduce {
+            text-align: center;
+        }
+
+        .sec2-bottom .introduce .introduce-pic {
+            margin-bottom: 20px;
+        }
+
+        .sec2-bottom .introduce .introduce-pic img {
+            width: 30%;
+        }
+
+        .sec2-bottom .introduce h2 {
+            font-size: 32px;
+            font-family: "Mochiy Pop P One", sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .sec2-bottom .introduce p {
+            max-width: 50%;
+            padding: 20px 0;
+            margin: auto;
+            text-align: left;
+            letter-spacing: .1em;
+            line-height: 2em;
+        }
+
+        .top-btn {
+            width: 100%;
+            text-align: right;
+        }
+
+        .top-btn a {
+            text-decoration: none;
+            width: 50px;
+            height: 40px;
+            background-color: #00BCD6;
+            color: #fff;
+            line-height: 40px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            display: inline-block;
+            position: absolute;
+            bottom: 2%;
+            right: 2%;
+            transition: .3s ease;
+        }
+
+        .top-btn a:hover {
+            color: #00BCD6;
+            background-color: #fff;
+        }
+
+        @keyframes flashing {
+            25% {
+                background-color: rgba(0, 0, 0, 1);
             }
-            .kv-wrap .kv-content .kv-block:first-child h3{
-                font-size: 32px;
-                font-weight: 700;
-                margin-bottom: 20px;
-            }
-            .kv-wrap .kv-content .kv-block:first-child p{
-                width: 50%;
-                line-height: 2em;
-                letter-spacing: .1em;
-            }
-            .kv-wrap .kv-content .kv-block:last-child{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding-top: 20px;
-            }
-            .kv-wrap .kv-content .kv-block:last-child h3{
-                font-size: 32px;
-                font-weight: 700;
-                margin-bottom: 20px;
-            }
-            .kv-wrap .kv-content .kv-block:last-child p{
-                line-height: 2em;
-                letter-spacing: .1em;
-            }
-            .kv-wrap .kv-content .kv-block:last-child .textContent{
-                width: 100%;
-            }
-            .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text{
-                width: 40%;
-                transform: translate(85%,30%);
-            }
-            .kv-wrap .kv-content .kv-block:last-child .kv-img{
-                margin-left: 5%;
-            }
-            .kv-wrap .kv-content .kv-block:last-child .kv-img img{
-                width: 70%;
-                vertical-align: middle;
-                transform: translate(-73%,45%);
-            }
-            .kv-wrap .kv-content .kv-block:last-child .kv-img::before{
-                content: '';
-                width:300px;
-                height: 200px;
-                background-color: #66D8CD;
-                display: block;
-                position: absolute;
-                bottom: -64%;
-                left: -48%;
-            }
-            /*section1*/
-            .section1{
-                background: url(pic/海bg.jpg);
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                padding: 10px 0;
-            }
-            .section1 .sec1-top{
-                text-align: center;
-            }
-            .section1 .sec1-top span{
-                font-size: 2rem;
-                display: block;
-                padding: 10px 0;
-                color: #fff;
-            }
-            .section1 .sec1-top h2{
-                font-size: 32px;
-                padding: 10px 0;
-                color: #fff;
-                font-family: "Mochiy Pop P One", sans-serif;
-            }
-            .section1 .sec1-top h2:before{
-                content: '';
-                display: block;
-                width: 70%;
-                margin: auto;
-                border-top: 1px solid #fff;
-                padding: 5px 0;
-            }
-            .card-list{
-                display: flex;
-            }
-            .card-list .card{
+
+            50% {
                 background-color: rgba(0, 0, 0, .5);
-                margin: 5px 15px 20px;
-                padding: 10px 20px 20px;
-                color: #fff;
-                transition: .3s ease;
             }
-            .card-list .card:hover{
-                animation: flashing .5s linear;
+
+            75% {
+                background-color: rgba(0, 0, 0, 1);
             }
-            .card-list .card .card-title{
-                display: flex;
-                align-items: center;
-                padding: 10px 0;
-                margin: 10px;
+
+            100% {
+                background-color: rgba(0, 0, 0, .5);
             }
-            .card-list .card .card-title h3{
-                margin-left: 10px;
-                font-weight: bold;
-                font-size: 20px;
+        }
+
+        @media screen and (max-width:768px) {
+            .title {
+                max-height: 300px;
             }
-            .card-list .card p{
-                padding: 10px 5px 5px;
-                line-height: 1.2em;
-                letter-spacing: .1em;
+
+            .kv-wrap {
+                padding-bottom: 30px;
             }
-            /*section2*/
-            .section2{
-                background-color: #ADE1FB;
-                position: relative;
-            }
-            .section2 .sec2-top{
-                padding: 20px 0;
-            }
-            .section2 .sec2-top h2{
-                text-align: center;
-                font-size: 32px;
-                font-weight: 700;
-                padding: 20px 0;
-            }
-            .section2 .sec2-top h2::before{
-                content: '';
-                display: block;
-                width: 70%;
-                height: 1px;
-                background-color: #000;
-                margin: 20px auto 50px;
-            }
-            .circle{
-                margin: 20px 0;
-            }
-            .circle .circle-list{
-                display: flex;
-                justify-content: space-evenly;
-            }
-            .circle .circle-item .circleImg{
-                width: 200px;
-                height: 200px;
-                border-radius: 100%;
-                border: 5px solid #fff;
-                box-shadow: 1px 1px 5px #000;
-                transform: rotate(0) scale(1);
-                transition: .5s ease;
-            }
-            .circle .circle-item .circleImg:hover{
-                transform: rotate(-45deg) scale(1.3);
-            }
-            .circle-item:hover .sloganTxt{
+
+            .kv-wrap .kv-content .kv-block:first-child .kv-img::before {
                 display: none;
             }
-            .circle .circle-item img{
-                vertical-align: middle;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                object-fit: cover;
-                transition: .5s ease;
 
-            }
-            .circle .circle-item .sloganTxt{
-                text-align: center;
-                position: relative;
-                top: -50%;
-                transition: .3s ease;
-            }
-            .circle .circle-item span{
+            .kv-wrap .kv-content .kv-block:first-child {
                 display: block;
-                color: #fff;
-                font-weight: 700;
-                font-size: 16px;
-                letter-spacing: .3em;
-                font-family: "Mochiy Pop P One", sans-serif;
             }
-            .sec2-bottom .introduce{
+
+            .kv-wrap .kv-content .kv-block .kv-img {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .kv-wrap .kv-content .kv-block:first-child .kv-img img {
+                transform: translate(0);
+            }
+
+            .kv-wrap .kv-content .kv-block:first-child .kv-text {
+                margin: 0;
                 text-align: center;
             }
-            .sec2-bottom .introduce .introduce-pic{
-                margin-bottom: 20px;
-            }
-            .sec2-bottom .introduce .introduce-pic img{
-                width: 30%;
-            }
-            .sec2-bottom .introduce h2{
-                font-size: 32px;
-                font-family: "Mochiy Pop P One", sans-serif;
-                margin-bottom: 20px;
-            }
-            .sec2-bottom .introduce p{
-                max-width: 50%;
-                padding: 20px 0;
+
+            .kv-wrap .kv-content .kv-block:first-child p {
                 margin: auto;
-                text-align: left;
-                letter-spacing: .1em;
-                line-height: 2em;
             }
-            .top-btn{
-                width: 100%;
-                text-align: right;
+
+            .kv-wrap .kv-content .kv-block:last-child .kv-img::before {
+                display: none;
             }
-            .top-btn a{
-                text-decoration: none;
-                width: 50px;
-                height: 40px;
-                background-color: #00BCD6;
-                color: #fff;
-                line-height: 40px;
-                border-radius: 5px;
-                font-size: 20px;
+
+            .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text {
                 text-align: center;
-                display: inline-block;
-                position: absolute;
-                bottom: 2%;
-                right: 2%;
-                transition: .3s ease;
+                width: 50%;
+                margin: auto;
+                transform: translate(0);
             }
-            .top-btn a:hover{
-                color: #00BCD6;
-                background-color: #fff;
+
+            .kv-wrap .kv-content .kv-block:last-child {
+                display: block;
             }
-            @keyframes flashing{
-                25%{
-                    background-color: rgba(0, 0, 0, 1);
-                }
-                50%{
-                    background-color: rgba(0, 0, 0, .5);
-                }
-                75%{
-                    background-color: rgba(0, 0, 0, 1);
-                }
-                100%{
-                    background-color: rgba(0, 0, 0, .5);
-                }
+
+            .kv-wrap .kv-content .kv-block:last-child .kv-img {
+                margin: 10px 0 0;
             }
-            @media screen and (max-width:768px){
-                .title{
-                    max-height: 300px;
-                }
-                .kv-wrap{
-                    padding-bottom: 30px;
-                }
-                .kv-wrap .kv-content .kv-block:first-child .kv-img::before{
-                    display: none;
-                }
-                .kv-wrap .kv-content .kv-block:first-child{
-                    display: block;
-                }
-                .kv-wrap .kv-content .kv-block .kv-img{
-                    text-align: center;
-                    margin-bottom: 20px;
-                }
-                .kv-wrap .kv-content .kv-block:first-child .kv-img img{
-                    transform: translate(0);
-                }
-                .kv-wrap .kv-content .kv-block:first-child .kv-text{
-                    margin: 0;
-                    text-align: center;
-                }
-                .kv-wrap .kv-content .kv-block:first-child p{
-                    margin: auto;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .kv-img::before{
-                    display: none;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text{
-                    text-align: center;
-                    width: 50%;
-                    margin: auto;
-                    transform: translate(0);
-                }
-                .kv-wrap .kv-content .kv-block:last-child{
-                    display: block;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .kv-img{
-                    margin: 10px 0 0;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .kv-img img{
-                    transform: translate(0);
-                    width: 50%;
-                }
-                .section1 .sec1-top h2{
-                    margin-bottom: 10px;
-                }
-                .card-list{
-                    display: block;
-                }
-                .card-list .card .card-title{
-                    justify-content: center;
-                }
-                .circle .circle-list{
-                    flex-wrap: wrap;
-                    gap: 30px;
-                }
-                .circle .circle-item {
-                    width: 300px;
-                }
-                .circle .circle-item .sloganTxt{
-                    position: sticky;
-                }
-                .circle .circle-item .circleImg{
-                    border-radius: 0;
-                    /* border: none; */
-                    width: 100%;
-                }
-                .circle .circle-item img{
-                    border-radius: 0;
-                }
-                .circle .circle-item .sloganTxt{
-                    margin-top: 20px;
-                    display: block;
-                }
-                .circle .circle-item .circleImg:hover{
-                    transform: rotate(0) scale(1);
-                }
-                .circle .circle-item .circleImg:hover img{
-                    transform:scale(1.1);
-                }
-                }
-            @media screen and (max-width:390px){
-                .title-wrap{
-                    display: block;
-                }
-                .title-wrap h1{
-                    text-align: center;
-                }
-                .section1 .sec1-top h2{
-                    font-size: 1.5rem;
-                }
-                .kv-wrap .kv-content .kv-block:first-child p{
-                    width: fit-content;
-                    padding: 10px;
-                }
-                .kv-wrap .kv-content .kv-block:first-child .kv-img img{
-                    width: 80%;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .kv-img img{
-                    width: 80%;
-                }
-                .kv-wrap .kv-content .kv-block:first-child h3{
-                    font-size: 1.5rem;
-                }
-                .kv-wrap .kv-content .kv-block:last-child h3{
-                    font-size: 1.5rem;
-                }
-                .sec2-bottom .introduce h2{
-                    font-size: 1.5rem;
-                }
-                .sec2-bottom .introduce .introduce-pic img{
-                    min-width: 80%;
-                }
-                .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text{
-                    width: 100%;
-                }
-                .kv-wrap .kv-content .kv-block:last-child p{
-                    padding: 10px;
-                }
-                .sec2-bottom .introduce p{
-                    max-width: 100%;
-                    padding: 20px;
-                }
-                .top-btn{
-                    text-align: center;
-                    padding: 10px 0;
-                }
-                .top-btn a{
-                    position: sticky;
-                }
+
+            .kv-wrap .kv-content .kv-block:last-child .kv-img img {
+                transform: translate(0);
+                width: 50%;
             }
-        </style>
-    </head>
-    <body>
-        <div class="Concept">
-            <div class="header">
-                <div class="customer">
-                    <div class="container">
-                        <div class="login">
-                            <div class="Sub-navigation">
-                                <div class="logo">
-                                    <a href="index.html"><img src="pic/logo白.png" alt="logo"></a>
-                                </div>
-                                <div class="nav">
-                                    <ul>
-                                        <li><a href="Brand.html">品牌理念</a></li>
-                                        <li><a href="destination.html">目的地</a></li>
-                                        <li><a href="plan.html">啟動計畫</a></li>
-                                        <li><a href="Experience.html">美好回憶</a></li>
-                                        <li><a href="form.html">聯絡我們</a></li>
-                                    </ul>
-                                </div>
-                                <div class="login-btn">
-                                    <a href="login.html">登入</a>
-                                </div>
+
+            .section1 .sec1-top h2 {
+                margin-bottom: 10px;
+            }
+
+            .card-list {
+                display: block;
+            }
+
+            .card-list .card .card-title {
+                justify-content: center;
+            }
+
+            .circle .circle-list {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .circle .circle-item {
+                width: 300px;
+            }
+
+            .circle .circle-item .sloganTxt {
+                position: sticky;
+            }
+
+            .circle .circle-item .circleImg {
+                border-radius: 0;
+                /* border: none; */
+                width: 100%;
+            }
+
+            .circle .circle-item img {
+                border-radius: 0;
+            }
+
+            .circle .circle-item .sloganTxt {
+                margin-top: 20px;
+                display: block;
+            }
+
+            .circle .circle-item .circleImg:hover {
+                transform: rotate(0) scale(1);
+            }
+
+            .circle .circle-item .circleImg:hover img {
+                transform: scale(1.1);
+            }
+        }
+
+        @media screen and (max-width:390px) {
+            .title-wrap {
+                display: block;
+            }
+
+            .title-wrap h1 {
+                text-align: center;
+            }
+
+            .section1 .sec1-top h2 {
+                font-size: 1.5rem;
+            }
+
+            .kv-wrap .kv-content .kv-block:first-child p {
+                width: fit-content;
+                padding: 10px;
+            }
+
+            .kv-wrap .kv-content .kv-block:first-child .kv-img img {
+                width: 80%;
+            }
+
+            .kv-wrap .kv-content .kv-block:last-child .kv-img img {
+                width: 80%;
+            }
+
+            .kv-wrap .kv-content .kv-block:first-child h3 {
+                font-size: 1.5rem;
+            }
+
+            .kv-wrap .kv-content .kv-block:last-child h3 {
+                font-size: 1.5rem;
+            }
+
+            .sec2-bottom .introduce h2 {
+                font-size: 1.5rem;
+            }
+
+            .sec2-bottom .introduce .introduce-pic img {
+                min-width: 80%;
+            }
+
+            .kv-wrap .kv-content .kv-block:last-child .textContent .kv-text {
+                width: 100%;
+            }
+
+            .kv-wrap .kv-content .kv-block:last-child p {
+                padding: 10px;
+            }
+
+            .sec2-bottom .introduce p {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .top-btn {
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .top-btn a {
+                position: sticky;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Concept">
+        <div class="header">
+            <div class="customer">
+                <div class="container">
+                    <div class="login">
+                        <div class="Sub-navigation">
+                            <div class="logo">
+                                <a href="index.html"><img src="pic/logo白.png" alt="logo"></a>
                             </div>
-                            <div class="menu">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                            <div class="nav">
+                                <ul>
+                                    <li><a href="Brand.html">品牌理念</a></li>
+                                    <li><a href="destination.html">目的地</a></li>
+                                    <li><a href="plan.html">啟動計畫</a></li>
+                                    <li><a href="Experience.html">美好回憶</a></li>
+                                    <li><a href="form.html">聯絡我們</a></li>
+                                </ul>
+                            </div>
+                            <div class="login-btn">
+                                <a href="login.html">登入</a>
                             </div>
                         </div>
-                    </div>
-                </div>  
-                <div class="title">
-                    <div class="container">
-                        <div class="title-wrap">
-                            <div class="title-img">
-                            <img src="pic/logo白.png" alt="logo">
-                            </div>
-                            <h1>Explore Taiwan</h1>
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                     </div>
-                </div> 
+                </div>
             </div>
-            <div class="main">
-                <div class="kv">
-                    <div class="container">
-                        <div class="kv-wrap">
-                            <div class="kv-content">
-                                <div class="kv-block">
-                                    <div class="kv-img">
-                                        <img src="pic/關於我們介紹頁圖.jpg" width="50%" alt="about me">
-                                    </div>
-                                    <div class="kv-text">
-                                        <h3>關於 Explore Taiwan 的誕生</h3>
-                                        <p>這個計劃的構想源自對這片美麗島嶼的熱愛和對文化多樣性的追求。在這篇文章中，我們將分享 Explore Taiwan 的起源和我們的願景。</p>
-                                    </div>
+            <div class="title">
+                <div class="container">
+                    <div class="title-wrap">
+                        <div class="title-img">
+                            <img src="pic/logo白.png" alt="logo">
+                        </div>
+                        <h1>Explore Taiwan</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="kv">
+                <div class="container">
+                    <div class="kv-wrap">
+                        <div class="kv-content">
+                            <div class="kv-block">
+                                <div class="kv-img">
+                                    <img src="pic/關於我們介紹頁圖.jpg" width="50%" alt="about me">
                                 </div>
-                                <div class="kv-block">
-                                    <div class="textContent">
+                                <div class="kv-text">
+                                    <h3>關於 Explore Taiwan 的誕生</h3>
+                                    <p>這個計劃的構想源自對這片美麗島嶼的熱愛和對文化多樣性的追求。在這篇文章中，我們將分享 Explore Taiwan 的起源和我們的願景。</p>
+                                </div>
+                            </div>
+                            <div class="kv-block">
+                                <div class="textContent">
                                     <div class="kv-text">
                                         <h3>起源</h3>
-                                        <p>Explore Taiwan 的誕生起源我們深信台灣擁有著許多秘境等待著被發現，這包括了藏於山林間的古老寺廟、隱藏在巷弄裡的傳統小吃、以及蜿蜒於山谷間的壯麗步道。然而，我們也意識到這些地方並不容易被發現，因此，我們決定創建 Explore Taiwan，我們希望能夠為旅客提供深入了解這塊自己土生土長在這塊美麗的地方</p>
+                                        <p>Explore Taiwan
+                                            的誕生起源我們深信台灣擁有著許多秘境等待著被發現，這包括了藏於山林間的古老寺廟、隱藏在巷弄裡的傳統小吃、以及蜿蜒於山谷間的壯麗步道。然而，我們也意識到這些地方並不容易被發現，因此，我們決定創建
+                                            Explore Taiwan，我們希望能夠為旅客提供深入了解這塊自己土生土長在這塊美麗的地方</p>
                                     </div>
-                                    </div>
-                                    <div class="kv-img">
-                                        <img src="pic/擎天崗.jpg" width="50%" alt="origin">
-                                    </div>
+                                </div>
+                                <div class="kv-img">
+                                    <img src="pic/擎天崗.jpg" width="50%" alt="origin">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="section1">
-                    <div class="container">
-                        <div class="sec1-wrap">
-                            <div class="sec1-top">
-                                <span>夢想的彼方</span>
-                                <h2>Beyond Dreams</h2>
-                            </div>
-                            <div class="sec1-bottom">
-                                <div class="card-list">
-                                    <div class="card">
-                                        <div class="card-title">
-                                            <div class="titleIcon">
-                                                <i class="fa-solid fa-lightbulb"></i>
-                                            </div>
-                                            <h3>探索與發現</h3>
-                                        </div>
-                                        <p>在 Explore Taiwan 的旅程中，我們將引領遊客深入台灣深藏的文化寶藏。我們深知台灣擁有豐富多元的文化資產，從傳統的藝術手工藝品到現代的藝文表演，每一處都蘊含著深厚的歷史底蘊。透過探索這些文化遺產，遊客將有機會深入了解台灣的多元文化，並在旅程中不斷發現新的驚喜與體驗</p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-title">
-                                            <div class="titleIcon">
-                                                <i class="fa-solid fa-user-group"></i>
-                                            </div>
-                                            <h3>文化交流</h3>
-                                        </div>
-                                        <p>我們致力於在 Explore Taiwan 的旅程中促進本地與遊客之間的文化交流。我們深知台灣文化的獨特之處，並希望能夠通過這次旅程與遊客分享這份獨特的文化魅力。我們將提供豐富多樣的文化體驗活動，讓遊客能夠親身感受台灣的傳統文化和現代風情，同時也鼓勵他們與當地居民進行交流與互動，以增進彼此的理解與友誼。</p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-title">
-                                            <div class="titleIcon">
-                                                <i class="fa-solid fa-tower-observation"></i>
-                                            </div>
-                                            <h3>可持續發展</h3>
-                                        </div>
-                                        <p>我們深知台灣的自然資源和文化遺產的珍貴價值，並致力於保護和推廣這些寶貴資產。在 Explore Taiwan 的旅程中，我們將秉持著可持續發展的理念，通過推廣生態旅遊和文化保育活動，促進旅遊業的健康發展，同時也保護和維護台灣獨特的自然風景和文化景觀，以確保這片美麗的土地能夠永續發展。</p>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-title">
-                                            <div class="titleIcon">
-                                                <i class="fa-solid fa-headphones"></i>  
-                                            </div>
-                                            <h3>服務至上</h3>
-                                        </div>
-                                        <p>在 Explore Taiwan 我們將客戶滿意度置於首位，致力於為每一位遊客提供優質的服務和全方位的支援。我們的團隊將全心全意地為遊客提供專業、周到的服務，確保他們在台灣的旅程中能夠感受到溫暖和貼心。我們將不斷努力改進和提升我們的服務品質，以滿足遊客的需求和期待，讓他們留下美好而難忘的回憶。</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section2">
-                    <div class="sec2-top">
-                        <div class="container">
-                            <h2>發現生活的美好</h2>
-                            <div class="circle">
-                                <div class="circle-list">
-                                    <div class="circle-item">
-                                        <div class="circleImg">
-                                        <img src="pic/life style.jpg">
-                                        </div>
-                                        <div class="sloganTxt">
-                                            <span>Life Style</span>
-                                        </div>
-                                    </div>
-                                    <div class="circle-item">
-                                        <div class="circleImg">
-                                        <img src="pic/taiwanfood.jpg">
-                                        </div>
-                                        <div class="sloganTxt">
-                                            <span>Taste</span>
-                                        </div>
-                                    </div>
-                                    <div class="circle-item">
-                                        <div class="circleImg">
-                                        <img src="pic/enjoy.jpg">
-                                        </div>
-                                        <div class="sloganTxt">
-                                            <span>Enjoy</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sec2-bottom">
-                        <div class="introduce">
-                            <div class="introduce-pic">
-                                <img src="pic/logo白.png" alt="logo">
-                            </div>
-                            <h2>Explore Taiwan</h2>
-                            <p>在 Explore Taiwan 的旅程中，我們將帶領您探索這片美麗而神奇的土地，體驗其獨特的文化和自然景觀。無論您是一位首次造訪的遊客還是一位對台灣已有所了解的老朋友，我們都誠摯地歡迎您加入我們的行列，一起探索台灣的奧秘和魅力。感謝您對 Explore Taiwan 的支持，讓我們一同展開這段精彩的旅程！祝您旅途愉快！</p>
-                        </div>
-                    </div>
-                    <div class="top-btn">
-                        <a href="#"><i class="fa-solid fa-angle-up"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer">
+            <div class="section1">
                 <div class="container">
-                    <div class="footer-wrap">
-                        <div class="lastPage">
-                            <h4>目的地</h4>
+                    <div class="sec1-wrap">
+                        <div class="sec1-top">
+                            <span>夢想的彼方</span>
+                            <h2>Beyond Dreams</h2>
+                        </div>
+                        <div class="sec1-bottom">
+                            <div class="card-list">
+                                <div class="card">
+                                    <div class="card-title">
+                                        <div class="titleIcon">
+                                            <i class="fa-solid fa-lightbulb"></i>
+                                        </div>
+                                        <h3>探索與發現</h3>
+                                    </div>
+                                    <p>在 Explore Taiwan
+                                        的旅程中，我們將引領遊客深入台灣深藏的文化寶藏。我們深知台灣擁有豐富多元的文化資產，從傳統的藝術手工藝品到現代的藝文表演，每一處都蘊含著深厚的歷史底蘊。透過探索這些文化遺產，遊客將有機會深入了解台灣的多元文化，並在旅程中不斷發現新的驚喜與體驗
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <div class="card-title">
+                                        <div class="titleIcon">
+                                            <i class="fa-solid fa-user-group"></i>
+                                        </div>
+                                        <h3>文化交流</h3>
+                                    </div>
+                                    <p>我們致力於在 Explore Taiwan
+                                        的旅程中促進本地與遊客之間的文化交流。我們深知台灣文化的獨特之處，並希望能夠通過這次旅程與遊客分享這份獨特的文化魅力。我們將提供豐富多樣的文化體驗活動，讓遊客能夠親身感受台灣的傳統文化和現代風情，同時也鼓勵他們與當地居民進行交流與互動，以增進彼此的理解與友誼。
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <div class="card-title">
+                                        <div class="titleIcon">
+                                            <i class="fa-solid fa-tower-observation"></i>
+                                        </div>
+                                        <h3>可持續發展</h3>
+                                    </div>
+                                    <p>我們深知台灣的自然資源和文化遺產的珍貴價值，並致力於保護和推廣這些寶貴資產。在 Explore Taiwan
+                                        的旅程中，我們將秉持著可持續發展的理念，通過推廣生態旅遊和文化保育活動，促進旅遊業的健康發展，同時也保護和維護台灣獨特的自然風景和文化景觀，以確保這片美麗的土地能夠永續發展。
+                                    </p>
+                                </div>
+                                <div class="card">
+                                    <div class="card-title">
+                                        <div class="titleIcon">
+                                            <i class="fa-solid fa-headphones"></i>
+                                        </div>
+                                        <h3>服務至上</h3>
+                                    </div>
+                                    <p>在 Explore Taiwan
+                                        我們將客戶滿意度置於首位，致力於為每一位遊客提供優質的服務和全方位的支援。我們的團隊將全心全意地為遊客提供專業、周到的服務，確保他們在台灣的旅程中能夠感受到溫暖和貼心。我們將不斷努力改進和提升我們的服務品質，以滿足遊客的需求和期待，讓他們留下美好而難忘的回憶。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section2">
+                <div class="sec2-top">
+                    <div class="container">
+                        <h2>發現生活的美好</h2>
+                        <div class="circle">
+                            <div class="circle-list">
+                                <div class="circle-item">
+                                    <div class="circleImg">
+                                        <img src="pic/life style.jpg">
+                                    </div>
+                                    <div class="sloganTxt">
+                                        <span>Life Style</span>
+                                    </div>
+                                </div>
+                                <div class="circle-item">
+                                    <div class="circleImg">
+                                        <img src="pic/taiwanfood.jpg">
+                                    </div>
+                                    <div class="sloganTxt">
+                                        <span>Taste</span>
+                                    </div>
+                                </div>
+                                <div class="circle-item">
+                                    <div class="circleImg">
+                                        <img src="pic/enjoy.jpg">
+                                    </div>
+                                    <div class="sloganTxt">
+                                        <span>Enjoy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec2-bottom">
+                    <div class="introduce">
+                        <div class="introduce-pic">
+                            <img src="pic/logo白.png" alt="logo">
+                        </div>
+                        <h2>Explore Taiwan</h2>
+                        <p>在 Explore Taiwan
+                            的旅程中，我們將帶領您探索這片美麗而神奇的土地，體驗其獨特的文化和自然景觀。無論您是一位首次造訪的遊客還是一位對台灣已有所了解的老朋友，我們都誠摯地歡迎您加入我們的行列，一起探索台灣的奧秘和魅力。感謝您對
+                            Explore Taiwan 的支持，讓我們一同展開這段精彩的旅程！祝您旅途愉快！</p>
+                    </div>
+                </div>
+                <div class="top-btn">
+                    <a href="#"><i class="fa-solid fa-angle-up"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="footer-wrap">
+                    <div class="lastPage">
+                        <h4>目的地</h4>
                         <ul class="place">
                             <li><a href="#">新北</a></li>
                             <li><a href="#">台北</a></li>
@@ -653,50 +770,51 @@
                             <li><a href="#">台中</a></li>
                             <li><a href="#">高雄</a></li>
                         </ul>
-                            <p>Explore Taiwan</p>
-                        </div>
-                        <div class="material">
-                            <h4>聯絡我們</h4>
-                            <ul class="phone">
-                                <li>+02(886) 1234 5678</li>
-                            </ul>
-                            <h4>電子郵件</h4>
-                            <ul class="e-mail">
-                                <li>explore168@gmail.com</li>
-                            </ul>
-                            <div class="tibame">
+                        <p>Explore Taiwan</p>
+                    </div>
+                    <div class="material">
+                        <h4>聯絡我們</h4>
+                        <ul class="phone">
+                            <li>+02(886) 1234 5678</li>
+                        </ul>
+                        <h4>電子郵件</h4>
+                        <ul class="e-mail">
+                            <li>explore168@gmail.com</li>
+                        </ul>
+                        <div class="tibame">
                             <p>本網站為緯育TibaMe前端工程師班第__期學員專題作品，本平台僅供學習、展示之用。</p>
-                            </div>
                         </div>
-                        <div class="sub">
-                            <span>趕緊手刀訂閱!立即獲得用戶限定優惠及私房景點資訊!</span>
-                            <div class="subs">
+                    </div>
+                    <div class="sub">
+                        <span>趕緊手刀訂閱!立即獲得用戶限定優惠及私房景點資訊!</span>
+                        <div class="subs">
                             <input type="email" placeholder="請輸入email">
                             <div class="subsTxt">
-                            <a href="#">訂閱電子報</a>
+                                <a href="#">訂閱電子報</a>
                             </div>
+                        </div>
+                        <div class="community">
+                            <div class="icon">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
                             </div>
-                            <div class="community">
-                                <div class="icon">
-                                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-                                </div>
-                                <span>CopyRight &copy;2024 By me All Right Resverd.</span>
-                            </div>
+                            <span>CopyRight &copy;2024 By me All Right Resverd.</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function() {
-                $('.menu').click(function() {
-                    $('.Sub-navigation').toggleClass('cas');
-                });
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('.menu').click(function () {
+                $('.Sub-navigation').toggleClass('cas');
             });
-        
-            </script>
-    </body>
-    </html>
+        });
+
+    </script>
+</body>
+
+</html>
